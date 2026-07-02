@@ -4,107 +4,349 @@
     {
       "id": "wprideprejudice",
       "title": "Pride and Prejudice",
-      "contributors": [{ "name": "Austen, Jane", "role": "author" }],
-      "subjects": [
+      "contributors": [
         {
-          "id": "https://id.loc.gov/authorities/subjects/sh85125352",
-          "labels": { "en": "Social classes" }
+          "name": "Austen, Jane",
+          "role": "author"
         }
       ],
-      "tags": ["Fiction", "Romance", "Classics"],
-      "languages": ["eng"],
-      "classifications": ["FIC004000"],
-      "formats": ["ebook", "audiobook"],
+      "subjects": [
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85123921",
+          "labels": {
+            "en": "Social classes",
+            "es": "Clases sociales"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh2026001126",
+          "labels": {
+            "en": "Fiction",
+            "es": "Ficción"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85078595",
+          "labels": {
+            "en": "Romance fiction",
+            "es": "Novela romántica"
+          },
+          "broader": [
+            "https://id.loc.gov/authorities/subjects/sh2026001126"
+          ]
+        }
+      ],
+      "tags": [
+        "Classics"
+      ],
+      "languages": [
+        "eng"
+      ],
+      "classifications": [
+        "FIC004000"
+      ],
+      "formats": [
+        "ebook",
+        "audiobook"
+      ],
       "instances": [
-        { "id": "iprideebook", "format": "ebook", "isbns": ["9780141439518"] },
-        { "id": "iprideaudio", "format": "audiobook", "isbns": ["9781402578809"] }
+        {
+          "id": "iprideebook",
+          "format": "ebook",
+          "isbns": [
+            "9780141439518"
+          ]
+        },
+        {
+          "id": "iprideaudio",
+          "format": "audiobook",
+          "isbns": [
+            "9781402578809"
+          ]
+        }
       ]
     },
     {
       "id": "wfrankenstein",
       "title": "Frankenstein",
       "subtitle": "The Modern Prometheus",
-      "contributors": [{ "name": "Shelley, Mary Wollstonecraft", "role": "author" }],
-      "subjects": [
+      "contributors": [
         {
-          "id": "https://id.loc.gov/authorities/subjects/sh85078595",
-          "labels": { "en": "Monsters" }
+          "name": "Shelley, Mary Wollstonecraft",
+          "role": "author"
         }
       ],
-      "tags": ["Fiction", "Horror", "Classics"],
-      "languages": ["eng"],
-      "classifications": ["FIC003000"],
-      "formats": ["ebook"],
+      "subjects": [
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85086994",
+          "labels": {
+            "en": "Monsters",
+            "es": "Monstruos"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh2026001126",
+          "labels": {
+            "en": "Fiction",
+            "es": "Ficción"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85062084",
+          "labels": {
+            "en": "Horror tales",
+            "es": "Cuentos de terror"
+          },
+          "broader": [
+            "https://id.loc.gov/authorities/subjects/sh2026001126"
+          ]
+        }
+      ],
+      "tags": [
+        "Classics"
+      ],
+      "languages": [
+        "eng"
+      ],
+      "classifications": [
+        "FIC003000"
+      ],
+      "formats": [
+        "ebook"
+      ],
       "instances": [
-        { "id": "ifrankebook", "format": "ebook", "isbns": ["9780486282114"] }
+        {
+          "id": "ifrankebook",
+          "format": "ebook",
+          "isbns": [
+            "9780486282114"
+          ]
+        }
       ]
     },
     {
       "id": "wtimemachine",
       "title": "The Time Machine",
-      "contributors": [{ "name": "Wells, H. G.", "role": "author" }],
-      "tags": ["Fiction", "Science Fiction", "Classics"],
-      "languages": ["eng"],
-      "classifications": ["FIC028000"],
-      "formats": ["ebook"],
+      "contributors": [
+        {
+          "name": "Wells, H. G.",
+          "role": "author"
+        }
+      ],
+      "tags": [
+        "Classics"
+      ],
+      "languages": [
+        "eng"
+      ],
+      "classifications": [
+        "FIC028000"
+      ],
+      "formats": [
+        "ebook"
+      ],
       "instances": [
-        { "id": "itimeebook", "format": "ebook", "isbns": ["9780451528551"] }
+        {
+          "id": "itimeebook",
+          "format": "ebook",
+          "isbns": [
+            "9780451528551"
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh2026001126",
+          "labels": {
+            "en": "Fiction",
+            "es": "Ficción"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85118629",
+          "labels": {
+            "en": "Science fiction",
+            "es": "Ciencia ficción"
+          },
+          "broader": [
+            "https://id.loc.gov/authorities/subjects/sh2026001126"
+          ]
+        }
       ]
     },
     {
       "id": "wdracula",
       "title": "Dracula",
-      "contributors": [{ "name": "Stoker, Bram", "role": "author" }],
-      "subjects": [
+      "contributors": [
         {
-          "id": "https://id.loc.gov/authorities/subjects/sh85142117",
-          "labels": { "en": "Vampires" }
+          "name": "Stoker, Bram",
+          "role": "author"
         }
       ],
-      "tags": ["Fiction", "Horror", "Classics"],
-      "languages": ["eng"],
-      "classifications": ["FIC003000"],
-      "formats": ["ebook", "audiobook"],
+      "subjects": [
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85141948",
+          "labels": {
+            "en": "Vampires",
+            "es": "Vampiros"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh2026001126",
+          "labels": {
+            "en": "Fiction",
+            "es": "Ficción"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85062084",
+          "labels": {
+            "en": "Horror tales",
+            "es": "Cuentos de terror"
+          },
+          "broader": [
+            "https://id.loc.gov/authorities/subjects/sh2026001126"
+          ]
+        }
+      ],
+      "tags": [
+        "Classics"
+      ],
+      "languages": [
+        "eng"
+      ],
+      "classifications": [
+        "FIC003000"
+      ],
+      "formats": [
+        "ebook",
+        "audiobook"
+      ],
       "instances": [
-        { "id": "idracebook", "format": "ebook", "isbns": ["9780486411095"] },
-        { "id": "idracaudio", "format": "audiobook", "isbns": ["9781400115152"] }
+        {
+          "id": "idracebook",
+          "format": "ebook",
+          "isbns": [
+            "9780486411095"
+          ]
+        },
+        {
+          "id": "idracaudio",
+          "format": "audiobook",
+          "isbns": [
+            "9781400115152"
+          ]
+        }
       ]
     },
     {
       "id": "wroomofonesown",
       "title": "A Room of One's Own",
-      "contributors": [{ "name": "Woolf, Virginia", "role": "author" }],
+      "contributors": [
+        {
+          "name": "Woolf, Virginia",
+          "role": "author"
+        }
+      ],
       "subjects": [
         {
           "id": "https://id.loc.gov/authorities/subjects/sh85047741",
-          "labels": { "en": "Feminism" }
+          "labels": {
+            "en": "Feminism",
+            "es": "Feminismo"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85044914",
+          "labels": {
+            "en": "Essays",
+            "es": "Ensayos"
+          }
         }
       ],
-      "tags": ["Nonfiction", "Essays", "Classics"],
-      "languages": ["eng"],
-      "classifications": ["LCO010000"],
-      "formats": ["ebook"],
+      "tags": [
+        "Nonfiction",
+        "Classics"
+      ],
+      "languages": [
+        "eng"
+      ],
+      "classifications": [
+        "LCO010000"
+      ],
+      "formats": [
+        "ebook"
+      ],
       "instances": [
-        { "id": "iroomebook", "format": "ebook", "isbns": ["9780156787338"] }
+        {
+          "id": "iroomebook",
+          "format": "ebook",
+          "isbns": [
+            "9780156787338"
+          ]
+        }
       ]
     },
     {
       "id": "wlefthandofdarkness",
       "title": "The Left Hand of Darkness",
-      "contributors": [{ "name": "Le Guin, Ursula K.", "role": "author" }],
+      "contributors": [
+        {
+          "name": "Le Guin, Ursula K.",
+          "role": "author"
+        }
+      ],
       "subjects": [
         {
           "id": "https://homosaurus.org/v3/homoit0000282",
-          "labels": { "en": "Gender identity" }
+          "labels": {
+            "en": "Gender identity",
+            "es": "Identidad de género"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh2026001126",
+          "labels": {
+            "en": "Fiction",
+            "es": "Ficción"
+          }
+        },
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85118629",
+          "labels": {
+            "en": "Science fiction",
+            "es": "Ciencia ficción"
+          },
+          "broader": [
+            "https://id.loc.gov/authorities/subjects/sh2026001126"
+          ]
         }
       ],
-      "tags": ["Fiction", "Science Fiction"],
-      "languages": ["eng"],
-      "classifications": ["FIC028000"],
-      "formats": ["ebook", "audiobook"],
+      "languages": [
+        "eng"
+      ],
+      "classifications": [
+        "FIC028000"
+      ],
+      "formats": [
+        "ebook",
+        "audiobook"
+      ],
       "instances": [
-        { "id": "ilhdebook", "format": "ebook", "isbns": ["9780441478125"] },
-        { "id": "ilhdaudio", "format": "audiobook", "isbns": ["9781483028772"] }
+        {
+          "id": "ilhdebook",
+          "format": "ebook",
+          "isbns": [
+            "9780441478125"
+          ]
+        },
+        {
+          "id": "ilhdaudio",
+          "format": "audiobook",
+          "isbns": [
+            "9781483028772"
+          ]
+        }
       ]
     }
   ]

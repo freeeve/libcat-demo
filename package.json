@@ -6,6 +6,9 @@
   "scripts": {
     "build": "hugo --minify --destination public",
     "search:index": "npx -y pagefind --site public",
-    "build:full": "npm run build && npm run search:index"
+    "build:full": "npm run build && npm run search:index",
+    "data:subjects": "node scripts/map-subjects.mjs",
+    "data:facets": "node scripts/gen-facets.mjs",
+    "data:build": "npm run data:subjects && npm run data:facets"
   }
 }

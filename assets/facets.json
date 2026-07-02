@@ -8,37 +8,91 @@
   ],
   "subjects": [
     {
+      "id": "https://id.loc.gov/authorities/subjects/sh2026001126",
+      "labels": {
+        "en": "Fiction",
+        "es": "Ficción"
+      },
+      "count": 5
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85062084",
+      "labels": {
+        "en": "Horror tales",
+        "es": "Cuentos de terror"
+      },
+      "count": 2,
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ]
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85118629",
+      "labels": {
+        "en": "Science fiction",
+        "es": "Ciencia ficción"
+      },
+      "count": 2,
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ]
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85044914",
+      "labels": {
+        "en": "Essays",
+        "es": "Ensayos"
+      },
+      "count": 1
+    },
+    {
       "id": "https://id.loc.gov/authorities/subjects/sh85047741",
       "labels": {
-        "en": "Feminism"
+        "en": "Feminism",
+        "es": "Feminismo"
       },
       "count": 1
     },
     {
       "id": "https://homosaurus.org/v3/homoit0000282",
       "labels": {
-        "en": "Gender identity"
+        "en": "Gender identity",
+        "es": "Identidad de género"
+      },
+      "count": 1
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85086994",
+      "labels": {
+        "en": "Monsters",
+        "es": "Monstruos"
       },
       "count": 1
     },
     {
       "id": "https://id.loc.gov/authorities/subjects/sh85078595",
       "labels": {
-        "en": "Monsters"
+        "en": "Romance fiction",
+        "es": "Novela romántica"
+      },
+      "count": 1,
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ]
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85123921",
+      "labels": {
+        "en": "Social classes",
+        "es": "Clases sociales"
       },
       "count": 1
     },
     {
-      "id": "https://id.loc.gov/authorities/subjects/sh85125352",
+      "id": "https://id.loc.gov/authorities/subjects/sh85141948",
       "labels": {
-        "en": "Social classes"
-      },
-      "count": 1
-    },
-    {
-      "id": "https://id.loc.gov/authorities/subjects/sh85142117",
-      "labels": {
-        "en": "Vampires"
+        "en": "Vampires",
+        "es": "Vampiros"
       },
       "count": 1
     }
@@ -49,27 +103,7 @@
       "count": 5
     },
     {
-      "value": "Fiction",
-      "count": 5
-    },
-    {
-      "value": "Horror",
-      "count": 2
-    },
-    {
-      "value": "Science Fiction",
-      "count": 2
-    },
-    {
-      "value": "Essays",
-      "count": 1
-    },
-    {
       "value": "Nonfiction",
-      "count": 1
-    },
-    {
-      "value": "Romance",
       "count": 1
     }
   ],
