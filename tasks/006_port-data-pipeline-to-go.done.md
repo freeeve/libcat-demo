@@ -38,3 +38,24 @@ the framework's own types and projector instead of re-implementing them.
   Node/`npx` step in the build.
 - Output is byte-compatible with today's pipeline (same schema v5, same facet ordering).
 - Token handling unchanged (env var, never committed); documented refresh command.
+
+## Decision (2026-07-02)
+
+Resolved in favor of the upstream option (§3, second bullet): the port lands as a
+**first-party Hardcover ingest provider in libcatalog** (`ingest/hardcover/`, mirroring
+`ingest/overdrive/`), not an adopter-local `cmd/data`. That routes this demo through the
+real ingest -> `lcat project` pipeline, so `catalog.json` + `facets.json` come from the
+genuine projector (schema v5, projector facet ordering) instead of the bespoke Node
+`gen-facets.mjs` -- exactly §2's intent.
+
+Per the workspace convention, the upstream change is proposed as a task there, left
+uncommitted: `../libcatalog/tasks/026_hardcover-ingest-source.md`. It captures the full
+port spec (GraphQL fetch, BIBFRAME crosswalk, in-graph controlled subjects, and the
+cover/rating/dateRead/description extras, which need `../libcatalog/tasks/022`
+adapter-forward-extra-params first).
+
+**Deferred here:** this repo keeps the Node pipeline (`scripts/*.mjs`,
+`npm run data:refresh`) as the working path until that upstream provider ships. When it
+does, swap `data:refresh` to drive `lcat ingest --provider hardcover` + `lcat project`
+and delete `scripts/*.mjs` and the `npx` build step (the acceptance criteria above).
+Done from this repo's side: decision made and upstream task filed.
