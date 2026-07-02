@@ -17,14 +17,15 @@ Done (verified in this repo):
 - **Performance** -- covers lazy-load (`loading="lazy"`); compression/cache headers land
   with the deploy (`tasks/003`).
 
-Remaining (inherently post-deploy / real browser):
+- **Lighthouse** (live, headless Chrome): Performance 98, **Accessibility 100**,
+  SEO 100, Best Practices 100. Two real-browser a11y issues Lighthouse surfaced (card
+  links distinguishable by color only; small pagination touch targets) were fixed in
+  `lcat-theme.css` and redeployed.
 
-- Lighthouse pass (perf/a11y/SEO) against the live CloudFront site -- no headless browser
-  here, and localhost perf wouldn't reflect the CDN.
-- Real-browser contrast + Pagefind widget AT spot-check (jsdom can't; the static markup
-  and computed contrast pass).
-- **Link-back** -- must land in the libcatalog repo, not here; task left there
-  (`../libcatalog/tasks/021`).
+Remaining (out of this repo):
+
+- **Link-back** -- must land in the libcatalog repo, not here; task filed there
+  (`../libcatalog/tasks/021`), now that the site is live.
 
 ## Context
 

@@ -68,10 +68,34 @@ h1, h2, .evl-brand-name, .lcat-card-title {
 }
 .lcat-facet summary { color: var(--evl-accent-ink); }
 
-/* Result cards. */
+/* Result cards. Card-title links stay underlined so they're distinguishable without
+   relying on color (WCAG 1.4.1, Lighthouse link-in-text-block). */
 .lcat-results > li { border-bottom: 1px solid var(--lcat-border); }
-.lcat-card-title a { text-decoration: none; }
-.lcat-card-title a:hover { text-decoration: underline; }
+.lcat-card-title a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* Pagination: touch targets >= ~44px with spacing (WCAG 2.5.8, Lighthouse target-size);
+   the module renders Hugo's _internal/pagination.html (.pagination/.page-link). */
+.pagination { gap: 0.4rem; flex-wrap: wrap; align-items: center; }
+.pagination .page-item { display: inline-flex; }
+.pagination .page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--lcat-border);
+  border-radius: 6px;
+  background: var(--evl-surface);
+  text-decoration: none;
+  color: var(--lcat-accent);
+}
+.pagination .page-item.active .page-link {
+  background: var(--lcat-accent);
+  border-color: var(--lcat-accent);
+  color: #fff;
+}
+.pagination .page-item.disabled .page-link { color: var(--lcat-muted); opacity: 0.65; }
 .lcat-tags li {
   background: var(--evl-surface-alt);
   color: var(--lcat-fg);
