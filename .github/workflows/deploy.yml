@@ -1,0 +1,67 @@
+name: deploy
+
+# Build and deploy Eve's Library to S3 + CloudFront (tasks/003 §4).
+# Auth is via GitHub OIDC (no long-lived AWS keys). Configure in the repo:
+#   Variables: AWS_REGION, AWS_DEPLOY_ROLE_ARN, S3_BUCKET, CLOUDFRONT_DISTRIBUTION_ID,
+#              HUGO_VERSION, HUGO_MODULE_VERSION
+#   Secrets (optional): HARDCOVER_TOKEN  (enables the read-shelf refresh)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * 1" # Mondays 07:00 UTC: refresh the read shelf if a token is set.
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  id-token: write # assume the deploy role via OIDC
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: ${{ vars.HUGO_VERSION || '0.148.2' }}
+      HARDCOVER_TOKEN: ${{ secrets.HARDCOVER_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Hugo extended
+        run: |
+          curl -sSLo hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i hugo.deb
+          hugo version
+
+      - name: Pin the published module version (drop the local replace)
+        run: scripts/pin-module.sh "${{ vars.HUGO_MODULE_VERSION }}"
+
+      - name: Refresh data from Hardcover (if a token is configured)
+        if: ${{ env.HARDCOVER_TOKEN != '' }}
+        run: npm run data:refresh
+
+      - name: Build + Pagefind index
+        run: npm run build:full
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Deploy to S3 + invalidate CloudFront
+        env:
+          BUCKET: ${{ vars.S3_BUCKET }}
+          DISTRIBUTION_ID: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: bash deploy/deploy.sh

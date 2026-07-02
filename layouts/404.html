@@ -1,0 +1,14 @@
+{{- /*
+  Branded 404 page (tasks/003). Hugo emits this to public/404.html; the CloudFront
+  distribution maps 403/404 origin responses to it (custom error response) so deep
+  links and missing paths land on a friendly, in-theme page rather than S3/XML. Uses
+  baseof with an empty sidebar so the facet grid collapses to one column.
+*/ -}}
+{{ define "sidebar" }}{{ end }}
+{{ define "main" }}
+<article class="evl-page">
+  <h1>{{ i18n "notFoundTitle" }}</h1>
+  <p>{{ i18n "notFoundBody" }}</p>
+  <p><a href="{{ "/" | relURL }}">{{ i18n "notFoundHome" }}</a> · <a href="{{ "/works/" | relURL }}">{{ i18n "backToAllWorks" }}</a></p>
+</article>
+{{ end }}

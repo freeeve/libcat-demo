@@ -39,3 +39,13 @@ other = "Read how it's built →"
 
 [shelfFeatured]
 other = "From the shelves"
+
+# 404 page (tasks/003)
+[notFoundTitle]
+other = "Page not found"
+
+[notFoundBody]
+other = "That page isn't on the shelf. It may have moved, or the link may be mistaken."
+
+[notFoundHome]
+other = "Return home"

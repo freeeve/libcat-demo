@@ -1,5 +1,30 @@
 # 003 -- Deploy to S3 + CloudFront (libcatalog.evefreeman.com)
 
+## Status (infra-as-code complete; apply blocked on an AWS account)
+
+Everything needed to stand up and deploy is written and validated; the actual
+`terraform apply` / live deploy is **blocked on AWS credentials + DNS control**, not
+available here. Done:
+
+- `deploy/terraform/` -- private S3 origin (OAC, no public website hosting), CloudFront
+  (compression, managed caching + security-headers policies, `index.html` root, a
+  viewer-request function for Hugo pretty URLs, 403/404 -> branded `/404.html`), ACM cert
+  in us-east-1 with DNS validation, optional Route 53 alias (`manage_dns` toggle for
+  external DNS), and a GitHub OIDC deploy role. `terraform validate` passes; `fmt` clean.
+- `deploy/deploy.sh` -- staged S3 sync with per-class cache headers + correct
+  content-types (Pagefind `immutable`, `.wasm` fixed, HTML short) + CloudFront
+  invalidation. `bash -n` clean.
+- `.github/workflows/deploy.yml` -- OIDC build+deploy on push to main, optional scheduled
+  Hardcover refresh.
+- `scripts/pin-module.sh` -- drops the local `replace` and pins a published module
+  version so no local-only path leaks into CI (tasks §3).
+- `layouts/404.html` -- branded not-found for the CloudFront error mapping.
+
+To finish: publish/tag the module (`hugo/vX.Y.Z`), `terraform apply` with a hosted zone
+(or external DNS), set the CI variables/secrets from the outputs (see `deploy/README.md`),
+and push. The module has **no tags yet**, so pinning + CI build will fail until it is
+tagged.
+
 ## Context
 
 The demo is a static site; ARCHITECTURE §6 names S3 + CloudFront as the Tier 1 target.
