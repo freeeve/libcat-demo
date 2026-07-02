@@ -1,0 +1,15 @@
+{{- /* Single event page (tasks/007). Empty sidebar; readable measure. */ -}}
+{{ define "sidebar" }}{{ end }}
+{{ define "main" }}
+<article class="evl-page evl-event-single">
+  <p class="evl-eyebrow"><a href="{{ "/events/" | relURL }}">← Events</a>
+    {{ with .Params.category }} · {{ . }}{{ end }}</p>
+  <h1>{{ .Title }}</h1>
+  <p class="evl-event-meta evl-event-meta--lg">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday, January 2, 2006" }}</time>
+    {{- with .Params.time }} · {{ . }}{{ end }}
+    {{- with .Params.location }} · <span class="evl-event-loc">{{ . }}</span>{{ end }}
+  </p>
+  {{ .Content }}
+</article>
+{{ end }}

@@ -1,0 +1,13 @@
+{{- /* Primary library navigation from Hugo's [[menu.main]] (tasks/007). Marks the
+       current section with aria-current so the catalog reads as one section among a
+       normal library site's pages. */ -}}
+<nav class="evl-nav" aria-label="{{ i18n "primaryNav" }}">
+  <ul>
+    {{- range site.Menus.main }}
+    {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) -}}
+    {{- /* Also treat a section landing (e.g. /works/) as active on its child pages. */ -}}
+    {{- if and (not $active) (ne .URL "/") }}{{ $active = hasPrefix $.RelPermalink (.URL | relURL) }}{{ end -}}
+    <li><a href="{{ .URL | relURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+    {{- end }}
+  </ul>
+</nav>

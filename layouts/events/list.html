@@ -1,0 +1,29 @@
+{{- /* Events listing (tasks/007): upcoming + past, from Hugo content under
+       content/events/. Empty sidebar so it spans full width. */ -}}
+{{ define "sidebar" }}{{ end }}
+{{ define "main" }}
+{{- $events := where site.RegularPages "Section" "events" -}}
+{{- $upcoming := sort (where $events "Date" "ge" now) "Date" "asc" -}}
+{{- $past := sort (where $events "Date" "lt" now) "Date" "desc" -}}
+<div class="evl-page evl-page--wide">
+  <h1>Events</h1>
+  <p class="evl-muted">Talks, storytimes, workshops, and clubs. <strong>Demo content</strong> for
+    a libcatalog + Hugo showcase — nothing here is a real event.</p>
+
+  <section aria-labelledby="evl-up-h">
+    <h2 id="evl-up-h">Upcoming</h2>
+    {{- with $upcoming }}
+    <ul class="evl-event-list">{{ range . }}<li>{{ partial "event-card.html" . }}</li>{{ end }}</ul>
+    {{- else }}
+    <p class="evl-muted">No upcoming events right now — check back soon.</p>
+    {{- end }}
+  </section>
+
+  {{- with $past }}
+  <section aria-labelledby="evl-past-h">
+    <h2 id="evl-past-h">Past events</h2>
+    <ul class="evl-event-list evl-event-list--past">{{ range . }}<li>{{ partial "event-card.html" . }}</li>{{ end }}</ul>
+  </section>
+  {{- end }}
+</div>
+{{ end }}

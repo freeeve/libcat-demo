@@ -40,6 +40,9 @@ other = "Read how it's built →"
 [shelfFeatured]
 other = "From the shelves"
 
+[primaryNav]
+other = "Primary"
+
 # 404 page (tasks/003)
 [notFoundTitle]
 other = "Page not found"

@@ -1,0 +1,52 @@
+# Sveltia CMS configuration (tasks/007). Git-based: edits are committed to the repo, so
+# the site stays static. To enable saving, set up a GitHub OAuth backend for the repo
+# (Sveltia supports several); until then the UI loads read-only. Docs: /docs/running-it/.
+backend:
+  name: github
+  repo: freeeve/libcatalog-demo
+  branch: main
+# For editing on your own machine without OAuth, run a local proxy and uncomment:
+# local_backend: true
+
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - name: events
+    label: Events
+    label_singular: Event
+    folder: content/events
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date & time, widget: datetime }
+      - { name: time, label: Time (display, e.g. 6:00-7:30pm), widget: string, required: false }
+      - { name: location, label: Location, widget: string, required: false }
+      - { name: category, label: Category, widget: string, required: false }
+      - { name: summary, label: Short summary, widget: text, required: false }
+      - { name: body, label: Details, widget: markdown }
+
+  - name: docs
+    label: Guides
+    label_singular: Guide
+    folder: content/docs
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: weight, label: Order, widget: number, required: false, value_type: int }
+      - { name: summary, label: Summary, widget: text, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: about
+        label: About page
+        file: content/about.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO description, widget: text, required: false }
+          - { name: body, label: Body, widget: markdown }

@@ -1,0 +1,10 @@
+{{- /* Sidebar nav for the docs section (tasks/007): overview + each guide by weight. */ -}}
+<nav class="evl-docnav-inner" aria-label="Documentation">
+  <p class="evl-docnav-title">How it's built</p>
+  <ul>
+    <li><a href="{{ "/docs/" | relURL }}"{{ if .IsHome }}{{ else if eq .RelPermalink ("/docs/" | relURL) }} aria-current="page"{{ end }}>Overview</a></li>
+    {{- range (sort (where site.RegularPages "Section" "docs") "Weight") }}
+    <li><a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $.RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a></li>
+    {{- end }}
+  </ul>
+</nav>

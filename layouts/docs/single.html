@@ -1,0 +1,12 @@
+{{- /* A documentation page (tasks/007): docs nav in the sidebar, prose in main. */ -}}
+{{ define "sidebar" }}
+<aside class="lcat-sidebar evl-docnav" aria-label="Documentation">{{ partial "docs-nav.html" . }}</aside>
+{{ end }}
+{{ define "main" }}
+<article class="evl-page evl-doc">
+  <p class="evl-eyebrow"><a href="{{ "/docs/" | relURL }}">← How it's built</a></p>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <p class="evl-doc-foot" data-pagefind-ignore><a href="{{ "/docs/" | relURL }}">← Back to all guides</a></p>
+</article>
+{{ end }}

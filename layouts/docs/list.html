@@ -1,0 +1,18 @@
+{{- /* Docs section landing (/docs/) (tasks/007): intro from _index.md + guide index. */ -}}
+{{ define "sidebar" }}
+<aside class="lcat-sidebar evl-docnav" aria-label="Documentation">{{ partial "docs-nav.html" . }}</aside>
+{{ end }}
+{{ define "main" }}
+<article class="evl-page evl-doc">
+  <h1>{{ .Title | default "How this site is built" }}</h1>
+  {{ .Content }}
+  <ul class="evl-doc-index">
+    {{- range (sort (where site.RegularPages "Section" "docs") "Weight") }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{- with .Params.summary }}<span class="evl-doc-index-sum">{{ . }}</span>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+</article>
+{{ end }}

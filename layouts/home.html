@@ -1,55 +1,106 @@
 {{- /*
-  Homepage for Eve's Library (tasks/002 §2). Adds a full-width hero + a "featured"
-  cover shelf ABOVE the module's Work list, without forking the module: the sidebar
-  and main blocks below reproduce the module's list.html so faceted browsing and
-  pagination still render exactly as the module intends. home.html wins over the
-  module's list.html for the home page only; /works/ keeps the module list.
+  Homepage for Eve's Library (tasks/007). This is a normal public-library landing page
+  -- NOT the catalog. It shows a welcome hero, hours/visit info, upcoming events (Hugo
+  content under content/events/), a teaser into the catalog (which lives at /works/),
+  news, and a "how this is built" callout. The point of the demo: libcatalog is one
+  section of an ordinary Hugo site. home.html wins over the module list.html for `/`
+  only; /works/ stays the module's faceted catalog.
 */ -}}
 
 {{ define "hero" }}
-<section class="evl-hero" aria-labelledby="evl-hero-h">
+<section class="evl-hero evl-hero--home" aria-labelledby="evl-hero-h">
   <div class="evl-hero-inner">
-    <h1 id="evl-hero-h">{{ i18n "heroTitle" }}</h1>
-    <p>{{ i18n "heroLede" }}</p>
-    <p><a href="{{ "/about/" | relURL }}">{{ i18n "heroCta" }}</a></p>
+    <p class="evl-hero-kicker">Public library · Demo</p>
+    <h1 id="evl-hero-h">Welcome to Eve's Library</h1>
+    <p>Browse the collection, come to an event, or see how this whole site is built with
+      open-source tools and no backend to run.</p>
+    <p class="evl-hero-cta">
+      <a class="evl-btn evl-btn--light" href="{{ "/works/" | relURL }}">Browse the catalog →</a>
+      <a class="evl-btn evl-btn--ghost" href="{{ "/events/" | relURL }}">What's on</a>
+    </p>
   </div>
 </section>
-{{- $works := where .RegularPagesRecursive "Section" "works" -}}
-{{- /* Prefer a "highly rated" shelf when the pipeline has ratings; else first N. */ -}}
-{{- $rated := where $works "Params.rating" "!=" nil -}}
-{{- $featured := cond (gt (len $rated) 0) (first 6 (sort $rated "Params.rating" "desc")) (first 6 $works) -}}
-{{- with $featured }}
-<section class="evl-shelf" aria-labelledby="evl-shelf-h">
-  <h2 id="evl-shelf-h">{{ i18n "shelfFeatured" }}</h2>
-  <ul class="evl-shelf-row">
-    {{- range . }}
-    <li class="evl-shelf-item">
-      <a href="{{ .RelPermalink }}">
-        {{ partial "cover.html" (dict "page" . "class" "evl-cover") }}
-        <span class="evl-shelf-title">{{ .Title }}</span>
-        {{- with .Params.contributorList }}<span class="evl-shelf-author">{{ (index . 0).name }}</span>{{ end }}
-      </a>
-    </li>
-    {{- end }}
-  </ul>
-</section>
-{{- end }}
 {{ end }}
 
-{{ define "sidebar" }}
-<aside class="lcat-sidebar" aria-label="{{ i18n "facets" }}">{{ partial "facets.html" . }}</aside>
-{{ end }}
+{{ define "sidebar" }}{{ end }}
 
 {{ define "main" }}
-{{- /* No h1 here: the hero block supplies the page's single h1. Cards stay at h2,
-       matching the module's heading order (page h1 -> card h2). */ -}}
-{{ $pages := .RegularPagesRecursive }}
-{{ $paginator := .Paginate $pages }}
-<p class="lcat-resultcount" role="status">{{ i18n "workCount" (len $pages) }}</p>
-<ol class="lcat-results" id="lcat-results">
-  {{ range $paginator.Pages }}
-  <li>{{ partial "work-card.html" . }}</li>
-  {{ end }}
-</ol>
-{{ template "_internal/pagination.html" . }}
+{{- $events := where (where site.RegularPages "Section" "events") "Params.demoPast" "!=" true -}}
+{{- $upcoming := first 3 (sort (where $events "Date" "ge" now) "Date" "asc") -}}
+{{- if not $upcoming }}{{ $upcoming = first 3 (sort $events "Date" "desc") }}{{ end -}}
+{{- $works := where site.RegularPages "Section" "works" -}}
+{{- $rated := where $works "Params.rating" "!=" nil -}}
+{{- $featured := first 5 (sort (cond (gt (len $rated) 0) $rated $works) "Params.rating" "desc") -}}
+
+<div class="evl-home">
+
+  {{- /* Quick info: hours, visit, card. */ -}}
+  <section class="evl-quickinfo" aria-label="Library information">
+    <div class="evl-info-card">
+      <h2>Hours</h2>
+      <p>{{ site.Params.library.hours.weekdays }}<br>{{ site.Params.library.hours.weekend }}</p>
+    </div>
+    <div class="evl-info-card">
+      <h2>Visit</h2>
+      <p>{{ site.Params.library.address }}<br>{{ site.Params.library.phone }}</p>
+    </div>
+    <div class="evl-info-card">
+      <h2>Get a card</h2>
+      <p>Free to residents. <span class="evl-muted">(Demo — there's nothing to sign up for.)</span></p>
+    </div>
+  </section>
+
+  {{- /* Upcoming events. */ -}}
+  <section class="evl-section" aria-labelledby="evl-events-h">
+    <div class="evl-section-head">
+      <h2 id="evl-events-h">Upcoming events</h2>
+      <a href="{{ "/events/" | relURL }}">All events →</a>
+    </div>
+    <ul class="evl-event-list">
+      {{- range $upcoming }}<li>{{ partial "event-card.html" . }}</li>{{ end }}
+    </ul>
+  </section>
+
+  {{- /* Catalog teaser -> /works/. */ -}}
+  <section class="evl-section" aria-labelledby="evl-cat-h">
+    <div class="evl-section-head">
+      <h2 id="evl-cat-h">From the catalog</h2>
+      <a href="{{ "/works/" | relURL }}">Browse all {{ len $works }} works →</a>
+    </div>
+    <p class="evl-muted">A faceted, full-text-searchable catalog built with the
+      <a href="https://github.com/freeeve/libcatalog">libcatalog</a> Hugo module.</p>
+    <ul class="evl-shelf-row">
+      {{- range $featured }}
+      <li class="evl-shelf-item">
+        <a href="{{ .RelPermalink }}">
+          {{ partial "cover.html" (dict "page" . "class" "evl-cover") }}
+          <span class="evl-shelf-title">{{ .Title }}</span>
+          {{- with .Params.contributorList }}<span class="evl-shelf-author">{{ (index . 0).name }}</span>{{ end }}
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+
+  {{- /* News / announcements (demo). */ -}}
+  <section class="evl-section" aria-labelledby="evl-news-h">
+    <h2 id="evl-news-h">News</h2>
+    <ul class="evl-news">
+      <li><strong>Summer reading is here.</strong> Log the books you finish and swap
+        recommendations at the front desk. <span class="evl-muted">(Demo content.)</span></li>
+      <li><strong>New: search the whole catalog.</strong> Full-text search now runs
+        entirely in your browser — no server, no tracking.</li>
+    </ul>
+  </section>
+
+  {{- /* Built-with callout. */ -}}
+  <section class="evl-buildstrip" aria-labelledby="evl-build-h">
+    <h2 id="evl-build-h">This whole site is a demo you can build yourself</h2>
+    <p>Static HTML generated by <a href="https://gohugo.io">Hugo</a>, a catalog from the
+      <a href="https://github.com/freeeve/libcatalog">libcatalog</a> module, hosted on a
+      CDN for pennies a month. No database, no backend.</p>
+    <p><a class="evl-btn evl-btn--solid" href="{{ "/docs/" | relURL }}">See how it's built →</a></p>
+  </section>
+
+</div>
 {{ end }}

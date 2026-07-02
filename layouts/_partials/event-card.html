@@ -1,0 +1,18 @@
+{{- /* One event as a card with a calendar-style date badge (tasks/007). The badge is
+       decorative (aria-hidden); the full date is the adjacent <time>. Heading is h3,
+       so it sits under an h2 section on both the homepage and the events list. */ -}}
+<article class="evl-event">
+  <div class="evl-date-badge" aria-hidden="true">
+    <span class="evl-date-mon">{{ .Date.Format "Jan" }}</span>
+    <span class="evl-date-day">{{ .Date.Format "2" }}</span>
+  </div>
+  <div class="evl-event-body">
+    <h3 class="evl-event-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="evl-event-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday, January 2, 2006" }}</time>
+      {{- with .Params.time }} · {{ . }}{{ end }}
+      {{- with .Params.location }} · <span class="evl-event-loc">{{ . }}</span>{{ end }}
+    </p>
+    {{- with or .Params.summary .Summary }}<p class="evl-event-desc">{{ . }}</p>{{ end }}
+  </div>
+</article>

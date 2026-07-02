@@ -24,11 +24,12 @@
 <body>
   <a class="lcat-skip" href="#lcat-main">Skip to main content</a>
   {{ partial "demo-banner.html" . }}{{/* EVL+ honest "this is a demo" ribbon */}}
-  <header class="lcat-header" data-pagefind-ignore>
+  <header class="lcat-header evl-header" data-pagefind-ignore>
     <a class="lcat-brand" href="{{ "/" | relURL }}">
       {{ partial "brand-mark.html" . }}{{/* EVL+ book colophon */}}
       <span class="evl-brand-name">{{ site.Title }}</span>
     </a>
+    {{ partial "nav.html" . }}{{/* EVL+ primary library navigation */}}
     {{ partial "search.html" . }}
   </header>
   {{ block "hero" . }}{{ end }}{{/* EVL+ full-width hero slot, filled by home.html */}}
