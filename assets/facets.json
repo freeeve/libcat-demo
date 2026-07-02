@@ -1,0 +1,130 @@
+{
+  "version": 5,
+  "languages": [
+    {
+      "value": "eng",
+      "count": 6
+    }
+  ],
+  "subjects": [
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85047741",
+      "labels": {
+        "en": "Feminism"
+      },
+      "count": 1
+    },
+    {
+      "id": "https://homosaurus.org/v3/homoit0000282",
+      "labels": {
+        "en": "Gender identity"
+      },
+      "count": 1
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85078595",
+      "labels": {
+        "en": "Monsters"
+      },
+      "count": 1
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85125352",
+      "labels": {
+        "en": "Social classes"
+      },
+      "count": 1
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85142117",
+      "labels": {
+        "en": "Vampires"
+      },
+      "count": 1
+    }
+  ],
+  "tags": [
+    {
+      "value": "Classics",
+      "count": 5
+    },
+    {
+      "value": "Fiction",
+      "count": 5
+    },
+    {
+      "value": "Horror",
+      "count": 2
+    },
+    {
+      "value": "Science Fiction",
+      "count": 2
+    },
+    {
+      "value": "Essays",
+      "count": 1
+    },
+    {
+      "value": "Nonfiction",
+      "count": 1
+    },
+    {
+      "value": "Romance",
+      "count": 1
+    }
+  ],
+  "formats": [
+    {
+      "value": "ebook",
+      "count": 6
+    },
+    {
+      "value": "audiobook",
+      "count": 3
+    }
+  ],
+  "contributors": [
+    {
+      "value": "Austen, Jane",
+      "count": 1
+    },
+    {
+      "value": "Le Guin, Ursula K.",
+      "count": 1
+    },
+    {
+      "value": "Shelley, Mary Wollstonecraft",
+      "count": 1
+    },
+    {
+      "value": "Stoker, Bram",
+      "count": 1
+    },
+    {
+      "value": "Wells, H. G.",
+      "count": 1
+    },
+    {
+      "value": "Woolf, Virginia",
+      "count": 1
+    }
+  ],
+  "classifications": [
+    {
+      "value": "FIC003000",
+      "count": 2
+    },
+    {
+      "value": "FIC028000",
+      "count": 2
+    },
+    {
+      "value": "FIC004000",
+      "count": 1
+    },
+    {
+      "value": "LCO010000",
+      "count": 1
+    }
+  ]
+}

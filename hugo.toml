@@ -1,0 +1,32 @@
+baseURL = "https://libcatalog.evefreeman.com/"
+title = "Eve's Library"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+
+# Adopt the libcatalog Hugo module: one page per Work, faceted navigation, accessible
+# multilingual chrome -- all from the projected catalog.json / facets.json under assets/.
+[module]
+  [[module.imports]]
+    path = "github.com/freeeve/libcatalog/hugo"
+
+[pagination]
+  pagerSize = 12
+
+# Required by the module: Hugo does not merge a module's [taxonomies], so declare them
+# here (copied verbatim from the module README).
+[taxonomies]
+  language = "languages"
+  subject = "subjects"
+  tag = "tags"
+  format = "formats"
+  contributor = "contributors"
+  classification = "classifications"
+
+# Pagefind search (libcatalog tasks/017): real ranked, per-language, CJK-capable
+# full-text over the built HTML. Post-build step: `npm run search:index` after `hugo`.
+[params.search]
+  engine = "pagefind"
+
+[params]
+  # This is a public demo of the libcatalog framework + Hugo, not a real collection.
+  demo = true

@@ -1,0 +1,111 @@
+{
+  "version": 5,
+  "works": [
+    {
+      "id": "wprideprejudice",
+      "title": "Pride and Prejudice",
+      "contributors": [{ "name": "Austen, Jane", "role": "author" }],
+      "subjects": [
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85125352",
+          "labels": { "en": "Social classes" }
+        }
+      ],
+      "tags": ["Fiction", "Romance", "Classics"],
+      "languages": ["eng"],
+      "classifications": ["FIC004000"],
+      "formats": ["ebook", "audiobook"],
+      "instances": [
+        { "id": "iprideebook", "format": "ebook", "isbns": ["9780141439518"] },
+        { "id": "iprideaudio", "format": "audiobook", "isbns": ["9781402578809"] }
+      ]
+    },
+    {
+      "id": "wfrankenstein",
+      "title": "Frankenstein",
+      "subtitle": "The Modern Prometheus",
+      "contributors": [{ "name": "Shelley, Mary Wollstonecraft", "role": "author" }],
+      "subjects": [
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85078595",
+          "labels": { "en": "Monsters" }
+        }
+      ],
+      "tags": ["Fiction", "Horror", "Classics"],
+      "languages": ["eng"],
+      "classifications": ["FIC003000"],
+      "formats": ["ebook"],
+      "instances": [
+        { "id": "ifrankebook", "format": "ebook", "isbns": ["9780486282114"] }
+      ]
+    },
+    {
+      "id": "wtimemachine",
+      "title": "The Time Machine",
+      "contributors": [{ "name": "Wells, H. G.", "role": "author" }],
+      "tags": ["Fiction", "Science Fiction", "Classics"],
+      "languages": ["eng"],
+      "classifications": ["FIC028000"],
+      "formats": ["ebook"],
+      "instances": [
+        { "id": "itimeebook", "format": "ebook", "isbns": ["9780451528551"] }
+      ]
+    },
+    {
+      "id": "wdracula",
+      "title": "Dracula",
+      "contributors": [{ "name": "Stoker, Bram", "role": "author" }],
+      "subjects": [
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85142117",
+          "labels": { "en": "Vampires" }
+        }
+      ],
+      "tags": ["Fiction", "Horror", "Classics"],
+      "languages": ["eng"],
+      "classifications": ["FIC003000"],
+      "formats": ["ebook", "audiobook"],
+      "instances": [
+        { "id": "idracebook", "format": "ebook", "isbns": ["9780486411095"] },
+        { "id": "idracaudio", "format": "audiobook", "isbns": ["9781400115152"] }
+      ]
+    },
+    {
+      "id": "wroomofonesown",
+      "title": "A Room of One's Own",
+      "contributors": [{ "name": "Woolf, Virginia", "role": "author" }],
+      "subjects": [
+        {
+          "id": "https://id.loc.gov/authorities/subjects/sh85047741",
+          "labels": { "en": "Feminism" }
+        }
+      ],
+      "tags": ["Nonfiction", "Essays", "Classics"],
+      "languages": ["eng"],
+      "classifications": ["LCO010000"],
+      "formats": ["ebook"],
+      "instances": [
+        { "id": "iroomebook", "format": "ebook", "isbns": ["9780156787338"] }
+      ]
+    },
+    {
+      "id": "wlefthandofdarkness",
+      "title": "The Left Hand of Darkness",
+      "contributors": [{ "name": "Le Guin, Ursula K.", "role": "author" }],
+      "subjects": [
+        {
+          "id": "https://homosaurus.org/v3/homoit0000282",
+          "labels": { "en": "Gender identity" }
+        }
+      ],
+      "tags": ["Fiction", "Science Fiction"],
+      "languages": ["eng"],
+      "classifications": ["FIC028000"],
+      "formats": ["ebook", "audiobook"],
+      "instances": [
+        { "id": "ilhdebook", "format": "ebook", "isbns": ["9780441478125"] },
+        { "id": "ilhdaudio", "format": "audiobook", "isbns": ["9781483028772"] }
+      ]
+    }
+  ]
+}
