@@ -15,6 +15,8 @@
 <html lang="{{ or site.Language.LanguageCode site.Language.Lang "en" }}">
 <head>
   <meta charset="utf-8">
+  {{- /* EVL+ pre-paint the stored theme so a dark choice never flashes light (module base). */}}
+  <script>try{var t=localStorage.getItem("lcat-theme");if(t)document.documentElement.setAttribute("data-lcat-theme",t)}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ partial "head/seo.html" . }}{{/* EVL+ replaces the module's bare <title> */}}
   {{ with resources.Get "lcat.css" }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
@@ -31,6 +33,7 @@
     </a>
     {{ partial "nav.html" . }}{{/* EVL+ primary library navigation */}}
     {{ partial "search.html" . }}
+    {{ partial "theme-toggle.html" . }}{{/* module light/dark toggle */}}
   </header>
   {{ block "hero" . }}{{ end }}{{/* EVL+ full-width hero slot, filled by home.html */}}
   <div class="lcat-layout">

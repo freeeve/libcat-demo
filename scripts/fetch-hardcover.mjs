@@ -136,8 +136,9 @@ function workId(book) {
 }
 
 /**
- * Map one Hardcover user_book to a catalog Work (schema v5). Extra fields the module's
- * adopter templates use (cover, rating, dateRead) ride alongside the core schema.
+ * Map one Hardcover user_book to a catalog Work (schema v5). Adopter-specific fields
+ * (cover, rating, dateRead, description) go under the reserved `extra` object, which the
+ * module content adapter forwards verbatim into page params (tasks/022).
  * @param {object} ub a user_books row with nested `book`
  */
 function toWork(ub) {
@@ -182,11 +183,13 @@ function toWork(ub) {
     formats: [...byFormat.keys()],
     instances: instances.length ? instances : [{ id: `i${book.id}` }],
   };
-  if (book.description) work.description = book.description;
+  const extra = {};
+  if (book.description) extra.description = book.description;
   const cover = book.image?.url || editions.find((e) => e.image?.url)?.image?.url;
-  if (cover) work.cover = cover;
-  if (ub.rating != null) work.rating = ub.rating;
-  if (ub.last_read_date || ub.first_read_date) work.dateRead = ub.last_read_date || ub.first_read_date;
+  if (cover) extra.cover = cover;
+  if (ub.rating != null) extra.rating = ub.rating;
+  if (ub.last_read_date || ub.first_read_date) extra.dateRead = ub.last_read_date || ub.first_read_date;
+  if (Object.keys(extra).length) work.extra = extra;
   return work;
 }
 

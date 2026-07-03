@@ -7,7 +7,7 @@ version 5) is produced. All commands run from the repo root.
 Hardcover "read" shelf
         │  scripts/fetch-hardcover.mjs   (npm run data:fetch)
         ▼
-assets/catalog.json      works with tags[] (genres), instances[], cover/rating/dateRead
+assets/catalog.json      works with tags[] (genres), instances[], extra{cover,rating,dateRead}
         │  scripts/map-subjects.mjs      (npm run data:subjects)
         ▼
 assets/catalog.json      + controlled subjects[] promoted from tags via data/subject-map.json
@@ -31,8 +31,10 @@ Or run the stages individually: `npm run data:fetch`, then `npm run data:build`
 - **`fetch-hardcover.mjs`** -- reads the authenticated user's *Read* shelf from the
   Hardcover GraphQL API (`status_id = 3`), paginating fully, and maps each book to a
   Work: title/subtitle, contributors (normalized to `Last, First`), genre `tags[]`,
-  `formats[]`/`instances[]` from editions (ISBN-13/10), plus `cover`, `rating`, and
-  `dateRead` for display. Controlled `subjects[]` are left to the next stage.
+  `formats[]`/`instances[]` from editions (ISBN-13/10). Adopter display fields (`cover`,
+  `rating`, `dateRead`, `description`) go under the reserved `extra` object, which the
+  module content adapter forwards verbatim into page params (tasks/022) -- so `covers = true`
+  renders them without shadowing the adapter. Controlled `subjects[]` are left to the next stage.
   - The token is read from `HARDCOVER_API_TOKEN` and never written to disk.
   - Hardcover's schema evolves; confirm field shape with
     `HARDCOVER_API_TOKEN=... node scripts/fetch-hardcover.mjs --introspect user_books`

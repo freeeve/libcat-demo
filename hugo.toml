@@ -60,6 +60,11 @@ buildFuture = true
   description = "Eve's Library is a public demo of the libcatalog framework and its Hugo module: a faceted, accessible, statically searchable catalog with no backend."
   ogImage = "/og-default.png"  # social share fallback for pages without a cover (tasks/005)
 
+  # Cover art (libcatalog tasks/025): the module renders a cover slot on result cards and
+  # Work detail pages from each Work's extra.cover (forwarded by the content adapter,
+  # tasks/022), falling back to a lettered placeholder. Our Hardcover pipeline supplies it.
+  covers = true
+
   # Fake public-library info for the demo homepage (tasks/007). Not a real library.
   [params.library]
     address = "123 Static Way, Evergreen"

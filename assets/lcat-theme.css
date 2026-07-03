@@ -1,127 +1,38 @@
 /*
-  Eve's Library -- adopter theme layered on top of the libcatalog module's lcat.css
-  (tasks/002). Loaded after lcat.css by the site's baseof.html override, so it wins
-  on cascade without forking the module stylesheet.
+  Eve's Library -- adopter chrome layered on top of the libcatalog module's lcat.css,
+  loaded after it by the site's baseof.html override.
 
-  Strategy: re-set the module's own --lcat-* custom properties for the palette (every
-  module component re-themes automatically) and add a small set of evl-* components
-  (hero, shelf, cover, footer) the module does not ship. All colors are checked to
-  meet WCAG 2.1 AA contrast against their background; verify in a real browser as a
-  separate pass (tasks/005) since jsdom can't compute contrast.
+  Strategy (module-defaults pass): the catalog (works list, Work detail, facets) now
+  renders in the module's DEFAULT theme -- this file no longer re-sets the module's
+  --lcat-* palette tokens or restyles its .lcat-* components, so the module's identity
+  and its built-in light/dark mode apply site-wide. What remains is the structural
+  evl-* chrome the module does not ship (hero, shelf, homepage, events, docs, footer,
+  nav). Those rules source their colors from the module's own --lcat-* tokens (aliased
+  below), so they stay coherent in both light and dark.
 
-  NOTE on ownership: much of what's here is generic polish + fixes for module-theme
-  defects (narrow sidebar-less pages, link/pagination a11y, desktop widths) that should
-  live in the module's default theme, not this adopter. Those are filed upstream
-  (../libcatalog/tasks/024 defects, 025 richer default theme). Once the module absorbs
-  them, this file should shrink to brand identity only -- palette, logo, hero/about copy.
+  A bespoke re-brand is a later pass: re-set the --lcat-* tokens here (accent, bg, fg,
+  ...) and every component -- module and evl-* alike -- re-themes from them.
 */
 
+/* Map the evl- theme tokens onto the module's tokens so demo chrome flips with the
+   theme (light/dark) instead of pinning a bespoke palette. Text that sits on an accent
+   background uses the module's --lcat-on-accent, which is contrast-correct in both modes. */
 :root {
-  /* Palette: warm "paper" background, deep teal accent, muted ink. */
-  --lcat-fg: #1c1b18;      /* ink on paper: ~15:1 */
-  --lcat-bg: #fbf9f4;      /* warm paper */
-  --lcat-accent: #115c52;  /* deep teal: 6.0:1 on paper, carries white text at 5.9:1 */
-  --lcat-muted: #5c574e;   /* muted ink: 5.9:1 on paper */
-  --lcat-border: #e2dccd;
-  --lcat-maxw: 72rem;
-
-  /* Theme-only tokens (evl- namespace). */
-  --evl-accent-ink: #0c443c;   /* darker teal for large headings */
-  --evl-gold: #8a5a12;         /* warm secondary accent: 5.3:1 on paper */
-  --evl-surface: #ffffff;      /* raised cards */
-  --evl-surface-alt: #f3efe4;  /* tag chips / subtle fills */
-  --evl-shadow: 0 1px 2px rgba(28, 27, 24, 0.06), 0 2px 8px rgba(28, 27, 24, 0.05);
-  --evl-radius: 10px;
+  --evl-accent-ink: var(--lcat-accent-ink);
+  --evl-gold: var(--lcat-accent);
+  --evl-surface: var(--lcat-surface);
+  --evl-surface-alt: var(--lcat-surface-alt);
+  --evl-shadow: var(--lcat-shadow);
+  --evl-radius: var(--lcat-radius);
 }
 
-/* Typography: a serif display face for headings gives the "library" feel; body
-   stays on the module's system stack for legibility and zero web-font cost. */
-body {
-  font: 100%/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
-h1, h2, .evl-brand-name, .lcat-card-title {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  letter-spacing: 0.01em;
-}
-
-/* Header / brand: give the module's brand link a book colophon and stronger identity. */
-.lcat-header {
-  background: var(--evl-surface);
-  border-bottom: 2px solid var(--lcat-accent);
-  padding: 0.85rem clamp(1rem, 4vw, 2rem);
-}
-.lcat-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: var(--evl-accent-ink);
-  font-size: 1.3rem;
-}
-.lcat-brand svg { flex: none; }
 .evl-brand-name { font-weight: 700; }
 
-/* Layout: a touch more breathing room than the module default. */
-.lcat-layout { padding: 1.75rem clamp(1rem, 4vw, 2rem); gap: 2.5rem; }
-
-/* Sidebar-less pages (Work detail, About, 404) render <main> as the ONLY grid child;
-   with grid-template-columns: 16rem 1fr that lone child lands in the 16rem sidebar
-   track, squeezing all copy into a ~256px column -- the "narrow/mobile" look. Make a
-   lone main span the full width. (Root cause is in the module theme; see
-   ../libcatalog/tasks/024.) */
-.lcat-layout > .lcat-main:only-child { grid-column: 1 / -1; }
-
-/* Facet sidebar: lift onto a card so it reads as a panel. */
-.lcat-sidebar {
-  background: var(--evl-surface);
-  border: 1px solid var(--lcat-border);
-  border-radius: var(--evl-radius);
-  padding: 1rem 1.1rem;
-  align-self: start;
-  box-shadow: var(--evl-shadow);
-}
-.lcat-facet summary { color: var(--evl-accent-ink); }
-
-/* Result cards. Card-title links stay underlined so they're distinguishable without
-   relying on color (WCAG 1.4.1, Lighthouse link-in-text-block). */
-.lcat-results > li { border-bottom: 1px solid var(--lcat-border); }
-.lcat-card-title a { text-decoration: underline; text-underline-offset: 2px; }
-
-/* Pagination: touch targets >= ~44px with spacing (WCAG 2.5.8, Lighthouse target-size);
-   the module renders Hugo's _internal/pagination.html (.pagination/.page-link). */
-.pagination { gap: 0.4rem; flex-wrap: wrap; align-items: center; }
-.pagination .page-item { display: inline-flex; }
-.pagination .page-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
-  padding: 0.4rem 0.65rem;
-  border: 1px solid var(--lcat-border);
-  border-radius: 6px;
-  background: var(--evl-surface);
-  text-decoration: none;
-  color: var(--lcat-accent);
-}
-.pagination .page-item.active .page-link {
-  background: var(--lcat-accent);
-  border-color: var(--lcat-accent);
-  color: #fff;
-}
-.pagination .page-item.disabled .page-link { color: var(--lcat-muted); opacity: 0.65; }
-.lcat-tags li {
-  background: var(--evl-surface-alt);
-  color: var(--lcat-fg);
-  border: 1px solid var(--lcat-border);
-}
-
-/* Cover art (tasks/002 §5): rendered by the work-card / page overrides when the
-   catalog carries a cover URL; falls back to a lettered placeholder otherwise. */
+/* Cover art. The catalog uses the module's own .lcat-cover; these evl-cover rules back
+   the homepage "featured shelf" (and the example in the theming doc). */
 .evl-card { display: flex; gap: 1rem; align-items: flex-start; }
-/* Cover box: set BOTH width and height in CSS. The <img> carries width/height HTML
-   attributes (for CLS); without an explicit CSS height the HTML height hint wins and
-   the box becomes the wrong shape, so object-fit crops to a thin slice. Explicit
-   dimensions keep every cover a true 2:3 portrait. */
+/* Cover box: set BOTH width and height so the HTML width/height hints (for CLS) don't
+   fight object-fit and crop to a slice; explicit dimensions keep a true 2:3 portrait. */
 .evl-cover {
   display: block;
   flex: none;
@@ -146,7 +57,8 @@ h1, h2, .evl-brand-name, .lcat-card-title {
 .evl-rating { color: var(--evl-gold); font-size: 0.85rem; letter-spacing: 0.1em; }
 .evl-rating span { color: var(--lcat-muted); letter-spacing: normal; }
 
-/* Homepage hero (tasks/002 §2). */
+/* Homepage hero. The inner panel is an accent gradient; text on it uses --lcat-on-accent
+   so it is legible whether the accent is dark (light mode) or light (dark mode). */
 .evl-hero {
   max-width: var(--lcat-maxw);
   margin: 0 auto;
@@ -154,14 +66,14 @@ h1, h2, .evl-brand-name, .lcat-card-title {
 }
 .evl-hero-inner {
   background: linear-gradient(135deg, var(--evl-accent-ink), var(--lcat-accent));
-  color: #fff;
+  color: var(--lcat-on-accent);
   border-radius: var(--evl-radius);
   padding: clamp(1.5rem, 4vw, 2.5rem);
   box-shadow: var(--evl-shadow);
 }
-.evl-hero h1 { margin: 0 0 0.4rem; color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.evl-hero h1 { margin: 0 0 0.4rem; color: var(--lcat-on-accent); font-size: clamp(1.8rem, 4vw, 2.6rem); }
 .evl-hero p { margin: 0.3rem 0 0; max-width: 46rem; font-size: 1.05rem; }
-.evl-hero a { color: #fff; text-decoration: underline; }
+.evl-hero a { color: var(--lcat-on-accent); text-decoration: underline; }
 
 /* "Featured" shelf of covers below the hero. */
 .evl-shelf { max-width: var(--lcat-maxw); margin: 1.5rem auto 0; padding: 0 clamp(1rem, 4vw, 2rem); }
@@ -186,7 +98,7 @@ h1, h2, .evl-brand-name, .lcat-card-title {
 .evl-shelf-title { display: block; margin-top: 0.5rem; font-weight: 600; font-size: 0.95rem; }
 .evl-shelf-author { display: block; color: var(--lcat-muted); font-size: 0.85rem; }
 
-/* Content pages (About): readable measure, module page.html untouched. */
+/* Content pages (About): readable measure. */
 .evl-page { max-width: 44rem; }
 .evl-page h1 { color: var(--evl-accent-ink); }
 .evl-page h2 { color: var(--evl-accent-ink); margin-top: 1.75rem; }
@@ -199,7 +111,7 @@ h1, h2, .evl-brand-name, .lcat-card-title {
   overflow-x: auto;
 }
 
-/* Persistent demo-disclosure footer (tasks/002 §4), on every page via baseof. */
+/* Persistent demo-disclosure footer, on every page via baseof. */
 .evl-footer {
   border-top: 1px solid var(--lcat-border);
   background: var(--evl-surface-alt);
@@ -222,22 +134,21 @@ h1, h2, .evl-brand-name, .lcat-card-title {
 
 /* A demo ribbon so no visitor mistakes this for a real collection. */
 .evl-demo-banner {
-  background: var(--evl-gold);
-  color: #fff;
+  background: var(--lcat-accent);
+  color: var(--lcat-on-accent);
   text-align: center;
   padding: 0.35rem 1rem;
   font-size: 0.85rem;
 }
-.evl-demo-banner a { color: #fff; text-decoration: underline; }
+.evl-demo-banner a { color: var(--lcat-on-accent); text-decoration: underline; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .lcat-card-title a, .evl-shelf-item a { transition: color 0.12s ease; }
+  .evl-shelf-item a { transition: color 0.12s ease; }
 }
 
 /* ============================================================================
-   Library site shell (tasks/007): primary nav, homepage, events, docs. These are
-   adopter chrome for an ordinary library site around the catalog -- another set of
-   candidates to migrate into a fuller module theme (see ../libcatalog/tasks/025).
+   Library site shell: primary nav, homepage, events, docs -- adopter chrome for an
+   ordinary library site around the catalog.
    ============================================================================ */
 
 /* Header + primary nav. */
@@ -255,7 +166,8 @@ h1, h2, .evl-brand-name, .lcat-card-title {
 .evl-nav a:hover { background: var(--evl-surface-alt); text-decoration: underline; }
 .evl-nav a[aria-current="page"] { color: var(--lcat-accent); box-shadow: inset 0 -3px 0 var(--lcat-accent); }
 
-/* Buttons. */
+/* Buttons. Solid/ghost sit on the accent hero, so their text uses --lcat-on-accent; the
+   "light" button is a surface chip that flips with the theme. */
 .evl-btn {
   display: inline-block;
   padding: 0.55rem 1.05rem;
@@ -265,9 +177,9 @@ h1, h2, .evl-brand-name, .lcat-card-title {
   border: 1px solid transparent;
 }
 .evl-btn:hover { text-decoration: underline; }
-.evl-btn--solid { background: var(--lcat-accent); color: #fff; border-color: var(--lcat-accent); }
-.evl-btn--light { background: #fff; color: var(--evl-accent-ink); }
-.evl-btn--ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.65); }
+.evl-btn--solid { background: var(--lcat-accent); color: var(--lcat-on-accent); border-color: var(--lcat-accent); }
+.evl-btn--light { background: var(--lcat-surface); color: var(--lcat-accent); border-color: var(--lcat-border); }
+.evl-btn--ghost { background: transparent; color: var(--lcat-on-accent); border-color: var(--lcat-on-accent); }
 
 /* Homepage. */
 .evl-hero--home .evl-hero-kicker {
@@ -275,7 +187,8 @@ h1, h2, .evl-brand-name, .lcat-card-title {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.8rem;
-  color: #d7e6e2;
+  color: var(--lcat-on-accent);
+  opacity: 0.85;
 }
 .evl-hero-cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.1rem; }
 .evl-home { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 1.5rem; }
@@ -319,7 +232,7 @@ h1, h2, .evl-brand-name, .lcat-card-title {
   width: 3.5rem;
   text-align: center;
   background: var(--lcat-accent);
-  color: #fff;
+  color: var(--lcat-on-accent);
   border-radius: 8px;
   padding: 0.4rem 0;
   line-height: 1.15;
@@ -341,7 +254,7 @@ h1, h2, .evl-brand-name, .lcat-card-title {
 .evl-docnav-inner ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.15rem; }
 .evl-docnav-inner a { display: block; padding: 0.4rem 0.55rem; border-radius: 6px; text-decoration: none; color: var(--lcat-fg); }
 .evl-docnav-inner a:hover { background: var(--evl-surface-alt); }
-.evl-docnav-inner a[aria-current="page"] { background: var(--lcat-accent); color: #fff; }
+.evl-docnav-inner a[aria-current="page"] { background: var(--lcat-accent); color: var(--lcat-on-accent); }
 .evl-doc { max-width: 48rem; }
 .evl-doc h2 { margin-top: 1.9rem; color: var(--evl-accent-ink); }
 .evl-doc :not(pre) > code { background: var(--evl-surface-alt); border: 1px solid var(--lcat-border); border-radius: 4px; padding: 0.05em 0.35em; font-size: 0.9em; }
