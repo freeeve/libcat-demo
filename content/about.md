@@ -41,16 +41,18 @@ artifact you can inspect:
 ## Try the cataloging backend
 
 The discovery site above is static — no backend to run. But the records themselves are
-produced by libcatalog's cataloging backend (`lcatd`): an editor with dry-run diffs, a
-review queue, copy cataloging, and editing profiles. A **read-only** instance is live so
-you can explore that side too, backed by the same 102 works:
+produced by libcatalog's cataloging backend (`lcatd`): a record editor, a review queue,
+copy cataloging, and editing profiles. A live **sandbox** instance lets you explore that
+side too, backed by the same 102 works:
 
 **[try.libcatalog.evefreeman.com ↗](https://try.libcatalog.evefreeman.com/)** — sign in
 as `demo@example.org` / `readonlydemo`.
 
-Writes are disabled, so you can open records, preview edits and their diffs, and walk the
-review and copy-cataloging flows — nothing you do is saved. It runs as a single
-scale-to-zero AWS Lambda, so the first request after it has been idle may take a moment.
+It's a sandbox: **edit a record and watch your change render**, search all of LCSH in the
+subject picker (live from `id.loc.gov`), and see existing subjects with their real
+headings — then refresh, and it's all back. **Nothing is ever saved.** It runs as a single
+scale-to-zero AWS Lambda behind CloudFront, so the first request after it has been idle may
+take a moment.
 
 ## The data
 

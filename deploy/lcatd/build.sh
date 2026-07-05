@@ -43,6 +43,12 @@ mkdir -p "$STAGE/grains/data"
 cp -R "$GRAINS/data/works" "$STAGE/grains/data/works"
 [[ -d "$GRAINS/data/authorities" ]] && cp -R "$GRAINS/data/authorities" "$STAGE/grains/data/authorities" || true
 
+# LCSH authority snapshot (tasks/011) so the sandbox editor renders existing subjects'
+# real headings under scheme "lcsh" (LCATD_VOCAB_SCHEMES=lcsh). Regenerate with
+# gen-lcsh.sh when the catalog's subjects change.
+mkdir -p "$STAGE/grains/data/authorities/vocab"
+cp "$HERE/lcsh.nq" "$STAGE/grains/data/authorities/vocab/lcsh.nq"
+
 echo "==> zipping"
 rm -f "$OUT/lcatd-demo.zip"
 ( cd "$STAGE" && zip -qr "$OUT/lcatd-demo.zip" bootstrap grains )

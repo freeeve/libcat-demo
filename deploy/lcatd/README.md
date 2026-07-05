@@ -1,13 +1,16 @@
-# Deploy: read-only cataloging demo (lcatd on Lambda)
+# Deploy: sandbox cataloging demo (lcatd on Lambda)
 
-The companion to the static catalog (tasks/009): a public, **read-only** `lcatd`
-instance so visitors can explore the *cataloging* side of libcatalog -- the editor,
-review queue, copy cataloging, profiles -- not just the finished catalog. Live at
+The companion to the static catalog (tasks/009): a public `lcatd` instance so visitors
+can explore the *cataloging* side of libcatalog -- the editor, review queue, copy
+cataloging, profiles -- not just the finished catalog. Live at
 https://try.libcatalog.evefreeman.com.
 
-Nothing a visitor does persists: the backend runs with `LCATD_READ_ONLY=1`, which wraps
-the grain store read-only and 403s every editorial/config write, while sign-in, reads,
-and dry-run previews still work. See libcatalog `backend/deploy/README.md` and tasks/097.
+Runs in **sandbox mode** (`LCATD_SANDBOX=1`, tasks/011): a visitor can edit a record and
+watch the change render (materialized from the dry-run), search all of LCSH in the subject
+picker (live from `id.loc.gov`), and see existing subjects with real headings -- but
+sandbox implies read-only, so the grain store is wrapped read-only and every write is
+403'd. Nothing persists; a page refresh (or Lambda cold start) resets everything. See
+libcatalog `backend/deploy/README.md` and tasks/097, 011.
 
 ## Shape (cheapest tier)
 
@@ -21,14 +24,19 @@ repo's `build/data/works`, from `npm run data:refresh`, tasks/008).
 
 ```
 Lambda (bootstrap + grains/ + embedded SPA)  <-  Function URL  <-  CloudFront  <-  try.libcatalog.evefreeman.com
-  LCATD_READ_ONLY=1, in-memory store, grains at /var/task/grains        edge-caches /assets/*; /config + /v1/* pass through
+  LCATD_SANDBOX=1, in-memory store, grains at /var/task/grains          edge-caches /assets/*; /config + /v1/* pass through
 ```
 
 ## Layout
 
 - `build.sh` -- builds `dist/lcatd-demo.zip`: `npm run build` the SPA (libcatalog
   tasks/098), `go build` the arm64 `bootstrap` from `../libcatalog/backend/cmd/lcatd-lambda`,
-  bundle `grains/` from this repo's `build/`. Requires a sibling `../libcatalog` checkout.
+  bundle `grains/` (works from this repo's `build/`, plus the LCSH snapshot below).
+  Requires a sibling `../libcatalog` checkout.
+- `lcsh.nq` + `gen-lcsh.sh` -- the corpus-sized LCSH authority snapshot bundled at
+  `grains/data/authorities/vocab/lcsh.nq` so the editor renders existing subjects' real
+  headings (`LCATD_VOCAB_SCHEMES=lcsh`, tasks/011). `gen-lcsh.sh` regenerates it via
+  `lcat vocab-subset` (needs internet); re-run when the catalog's subjects change.
 - `terraform/` -- `cloudfront.tf` wires the libcatalog `readonly-demo` module (Lambda +
   Function URL + CloudFront, `?ref=backend/v0.3.0`); `main.tf` holds the shared `LCATD_*`
   env, the us-east-1 ACM cert, and the Route 53 alias -> CloudFront. Secrets in a
@@ -64,15 +72,19 @@ gitignored `terraform.tfvars`, written by `deploy.sh`:
 
 ## Notes / caveats
 
-- **Read-only guarantees.** Writes are rejected twice: the blob store returns
-  `ErrReadOnly`, and the HTTP guard 403s mutating methods except allow-listed auth and
-  dry-run (`/ops`, `/marc`, `/v1/copycat/search`, `/v1/batch/resolve`). Verified:
-  `POST /v1/publish` -> 403 (authed and unauthed).
+- **Sandbox, nothing persists.** Sandbox mode shows Save and renders an edit from the
+  dry-run's materialized doc, but writes are still rejected twice -- the blob store returns
+  `ErrReadOnly` and the HTTP guard 403s mutating methods (except allow-listed auth and
+  dry-run). Verified: `POST /v1/publish` -> 403 (authed and unauthed); a refresh/cold start
+  resets everything.
 - **In-memory store + cold starts.** Concurrent Lambda instances have separate in-memory
   stores, so a session's *refresh* can miss across instances; the stable signing key
   keeps the access token valid, so re-login is the worst case. The store resets on cold
   start -- desirable for a demo.
-- **No authorities seeded.** `build/data/works` has no `data/authorities/`, so vocabulary
-  panels read empty. Seed `data/authorities/` into the grains to enrich the editor.
+- **LCSH.** Live subject search proxies to `id.loc.gov` (`/v1/vocabsuggest`, no local
+  load -- the Lambda has outbound internet). Existing subjects resolve to real headings
+  from the bundled `lcsh.nq` snapshot (`LCATD_VOCAB_SCHEMES=lcsh`). The demo's catalog uses
+  https LCSH URIs, so the snapshot is realigned to https to match (see `gen-lcsh.sh` and
+  libcatalog tasks/100).
 - **Writable production** (persistent DynamoDB + S3) is out of scope here -- see
   libcatalog tasks/099 and `backend/deploy/terraform` (the writable reference stack).

@@ -1,0 +1,165 @@
+<https://id.loc.gov/authorities/subjects/sh2026001126> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001126> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2026001143> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001126> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/authorities/childrensSubjects/sj2023050249> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001126> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/authorities/childrensSubjects/sj96004703> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001126> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/authorities/childrensSubjects/sj96006185> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001126> <http://www.w3.org/2004/02/skos/core#altLabel> "Legends and stories"@en-latn <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001126> <http://www.w3.org/2004/02/skos/core#altLabel> "Novels"@en-latn <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001126> <http://www.w3.org/2004/02/skos/core#altLabel> "Stories"@en-latn <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001184> <http://www.w3.org/2004/02/skos/core#prefLabel> "Poetry"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001184> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2026001147> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh2026001184> <http://www.w3.org/2004/02/skos/core#altLabel> "Poems"@en-latn <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adventure stories"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85048050> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh85119251> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb126475309> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX534858> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX539858> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/797462> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.yso.fi/onto/yso/p5089> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4000089-8> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4211406-8> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4225175-8> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#altLabel> "Adventure fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85001072> <http://www.w3.org/2004/02/skos/core#altLabel> "Adventure novels"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#prefLabel> "Detective and mystery stories"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85048050> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2002011186> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2008020084> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2021001547> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2021005164> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2021005855> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2024002831> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb11932793q> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb12453008n> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb12453012w> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX527698> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX529341> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX529497> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.ndl.go.jp/auth/ndlsh/00571582> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/891461> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/bncf/tid/3577> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q6585139> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.yso.fi/onto/yso/p5086> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/1029148740> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4033187-8> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4165727-5> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4165739-1> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#altLabel> "Detective and mystery fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85037260> <http://www.w3.org/2004/02/skos/core#altLabel> "Mystery stories"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85040350> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dystopias"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85040350> <http://www.w3.org/2004/02/skos/core#related> <https://id.loc.gov/authorities/subjects/sh85141635> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85040350> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb177181582> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85040350> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX5881593> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85040350> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/900372> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85040350> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/bncf/tid/20474> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85040350> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.yso.fi/onto/yso/p20646> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85040350> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4202262-9> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85040350> <http://www.w3.org/2004/02/skos/core#altLabel> "Anti-utopias"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fantasy fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85047145> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85048050> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2021005900> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh85079627> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb11931787j> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb11952413t> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX527731> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX529629> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/920710> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://vocab.getty.edu/aat/300417820> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4129956-5> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4174124-9> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#altLabel> "Fantastic fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85047114> <http://www.w3.org/2004/02/skos/core#altLabel> "Heroic fantasy (Fiction)"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#prefLabel> "Historical fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85048050> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2013002993> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2021005950> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb119808101> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX528393> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX539859> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.ndl.go.jp/auth/ndlsh/00569376> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/957973> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/bncf/tid/29023> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4025132-9> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85061165> <http://www.w3.org/2004/02/skos/core#altLabel> "Historical novels"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#prefLabel> "Horror tales"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85048050> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2008020084> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2021005956> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2022007623> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#related> <https://id.loc.gov/authorities/subjects/sh85054811> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb181465034> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb181471080> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX527730> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX529464> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX533306> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.ndl.go.jp/auth/ndlsh/00564578> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/960387> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/bncf/tid/5382> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4134817-5> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4160682-6> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#altLabel> "Horror fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#altLabel> "Horror stories"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#altLabel> "Scary stories"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#altLabel> "Scary tales"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#altLabel> "Tales, Horror"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85062084> <http://www.w3.org/2004/02/skos/core#altLabel> "Terror tales"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#prefLabel> "Romance fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85048050> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2021006021> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/authorities/genreForms/gf2024026063> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb11936793p> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb11965181d> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb165494270> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX5356473> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX545364> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX6533042> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.ndl.go.jp/auth/ndlsh/01198251> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1002985> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q738473> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.yso.fi/onto/yso/p19257> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4167620-8> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#altLabel> "Love stories"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#altLabel> "Romances (Love stories)"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#altLabel> "Romantic fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85078595> <http://www.w3.org/2004/02/skos/core#altLabel> "Romantic stories"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#prefLabel> "Science fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85048050> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2012000080> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2017004692> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2021006139> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh85020884> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh85026768> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh85137181> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh88005014> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh95002478> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh97006505> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#related> <https://id.loc.gov/authorities/subjects/sh85052608> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb119332311> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX526286> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX529322> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX529323> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX531491> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.ndl.go.jp/auth/ndlsh/00564441> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1108566> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/bncf/tid/7623> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q24925> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q3238422> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4054021-2> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85118629> <http://www.w3.org/2004/02/skos/core#altLabel> "Science stories"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85149267> <http://www.w3.org/2004/02/skos/core#prefLabel> "Young adult fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85149267> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85048050> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85149267> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85149268> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85149267> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb18210183m> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85149267> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1183080> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh85149267> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://d-nb.info/gnd/4834232-4> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh98004883> <http://www.w3.org/2004/02/skos/core#prefLabel> "Suspense fiction"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh98004883> <http://www.w3.org/2004/02/skos/core#broader> <https://id.loc.gov/authorities/subjects/sh85048050> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh98004883> <http://www.w3.org/2004/02/skos/core#narrower> <https://id.loc.gov/authorities/subjects/sh2008020084> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh98004883> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb169444651> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh98004883> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1139687> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh98004883> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.yso.fi/onto/yso/p5087> <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh98004883> <http://www.w3.org/2004/02/skos/core#altLabel> "Suspense tales"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh98004883> <http://www.w3.org/2004/02/skos/core#altLabel> "Tales, Suspense"@en <authority:lcsh> .
+<https://id.loc.gov/authorities/subjects/sh98004883> <http://www.w3.org/2004/02/skos/core#altLabel> "Thrillers (Fiction)"@en <authority:lcsh> .

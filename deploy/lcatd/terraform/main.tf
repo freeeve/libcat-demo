@@ -8,8 +8,13 @@ locals {
   # Consumed by module.demo (cloudfront.tf). Grains extract to /var/task/grains on Lambda.
   lambda_env = merge(
     {
-      LCATD_READ_ONLY         = "1"
-      LCATD_BLOB_DIR          = "/var/task/grains"
+      # Sandbox implies read-only: the editor shows Save and renders each edit as if
+      # committed (dry-run doc), wiped on refresh -- nothing persists (tasks/011).
+      LCATD_SANDBOX  = "1"
+      LCATD_BLOB_DIR = "/var/task/grains"
+      # Bundled LCSH snapshot so existing subjects render real headings. Live LCSH
+      # subject search (id.loc.gov via /v1/vocabsuggest) works with no local load.
+      LCATD_VOCAB_SCHEMES     = "lcsh"
       LCATD_LOCAL_AUTH        = "1"
       LCATD_BOOTSTRAP_ADMIN   = var.demo_admin
       LCATD_LOCAL_SIGNING_KEY = var.local_signing_key
