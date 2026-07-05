@@ -27,6 +27,9 @@ other = "About"
 [footerHugoModule]
 other = "Hugo module"
 
+[footerTryBackend]
+other = "Cataloging demo"
+
 # Homepage hero (tasks/002 §2).
 [heroTitle]
 other = "Welcome to Eve's Library"

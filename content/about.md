@@ -38,6 +38,20 @@ artifact you can inspect:
 - **Accessibility.** The module targets WCAG 2.1 AA — skip link, focus styles, heading
   order, and keyboard-navigable search.
 
+## Try the cataloging backend
+
+The discovery site above is static — no backend to run. But the records themselves are
+produced by libcatalog's cataloging backend (`lcatd`): an editor with dry-run diffs, a
+review queue, copy cataloging, and editing profiles. A **read-only** instance is live so
+you can explore that side too, backed by the same 102 works:
+
+**[try.libcatalog.evefreeman.com ↗](https://try.libcatalog.evefreeman.com/)** — sign in
+as `demo@example.org` / `readonlydemo`.
+
+Writes are disabled, so you can open records, preview edits and their diffs, and walk the
+review and copy-cataloging flows — nothing you do is saved. It runs as a single
+scale-to-zero AWS Lambda, so the first request after it has been idle may take a moment.
+
 ## The data
 
 The catalog is Eve's real reading history, sourced from

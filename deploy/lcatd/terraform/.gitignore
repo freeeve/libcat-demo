@@ -1,0 +1,8 @@
+# Terraform state + downloaded providers + secrets (never commit)
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+tfplan
+terraform.tfvars
+*.auto.tfvars
