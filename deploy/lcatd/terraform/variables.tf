@@ -51,15 +51,3 @@ variable "abuse_secret" {
   default     = ""
   sensitive   = true
 }
-
-variable "lambda_memory_mb" {
-  description = "Lambda memory (also scales CPU; helps cold-start of the embedded SPA + grain reads)."
-  type        = number
-  default     = 512
-}
-
-variable "log_retention_days" {
-  description = "CloudWatch Logs retention for the function."
-  type        = number
-  default     = 14
-}

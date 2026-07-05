@@ -13,13 +13,15 @@ and dry-run previews still work. See libcatalog `backend/deploy/README.md` and t
 
 One arm64 Lambda (`provided.al2023`) serving the libcatalog backend with the cataloging
 SPA embedded and the BIBFRAME grains **bundled in the zip** -- in-memory document store,
-so **no DynamoDB and no S3**. Fronted by an API Gateway v2 HTTP API on a custom
-subdomain. Scale-to-zero: ~$0 when idle. The grains are the same corpus as the static
-catalog (this repo's `build/data/works`, from `npm run data:refresh`, tasks/008).
+so **no DynamoDB and no S3**. Fronted by **CloudFront + a Lambda Function URL** (tasks/010,
+via the libcatalog `readonly-demo` module): CloudFront edge-caches the SPA's hashed
+`/assets/*` so page loads don't wake Lambda, and a Function URL has no per-request charge.
+Scale-to-zero: ~$0 when idle. The grains are the same corpus as the static catalog (this
+repo's `build/data/works`, from `npm run data:refresh`, tasks/008).
 
 ```
-Lambda (bootstrap + grains/ + embedded SPA)  <-  API Gateway v2 HTTP API  <-  try.libcatalog.evefreeman.com
-  LCATD_READ_ONLY=1, in-memory store, grains at /var/task/grains
+Lambda (bootstrap + grains/ + embedded SPA)  <-  Function URL  <-  CloudFront  <-  try.libcatalog.evefreeman.com
+  LCATD_READ_ONLY=1, in-memory store, grains at /var/task/grains        edge-caches /assets/*; /config + /v1/* pass through
 ```
 
 ## Layout
@@ -27,8 +29,10 @@ Lambda (bootstrap + grains/ + embedded SPA)  <-  API Gateway v2 HTTP API  <-  tr
 - `build.sh` -- builds `dist/lcatd-demo.zip`: `npm run build` the SPA (libcatalog
   tasks/098), `go build` the arm64 `bootstrap` from `../libcatalog/backend/cmd/lcatd-lambda`,
   bundle `grains/` from this repo's `build/`. Requires a sibling `../libcatalog` checkout.
-- `terraform/` -- Lambda + exec role (logs only) + API Gateway v2 HTTP API + ACM cert +
-  Route 53 (custom domain). Reads secrets from a gitignored `terraform.tfvars`.
+- `terraform/` -- `cloudfront.tf` wires the libcatalog `readonly-demo` module (Lambda +
+  Function URL + CloudFront, `?ref=backend/v0.3.0`); `main.tf` holds the shared `LCATD_*`
+  env, the us-east-1 ACM cert, and the Route 53 alias -> CloudFront. Secrets in a
+  gitignored `terraform.tfvars`.
 - `deploy.sh` -- `build.sh`, then generate/reuse a stable signing key, then
   `terraform apply`.
 
@@ -39,18 +43,19 @@ AWS_PROFILE=deeplibby-admin deploy/lcatd/deploy.sh              # review plan, a
 AWS_PROFILE=deeplibby-admin deploy/lcatd/deploy.sh -auto-approve
 ```
 
-First apply provisions 15 resources and validates the ACM cert via DNS; the domain is
-live once the cert validates and DNS propagates (a few minutes). Redeploy after a data
-refresh or module bump by re-running `deploy.sh` (the zip's `source_code_hash` change
-triggers a Lambda code update; the signing key is preserved).
+First apply validates the ACM cert via DNS and provisions the CloudFront distribution
+(the distribution takes a few minutes to deploy). Redeploy after a data refresh or module
+bump by re-running `deploy.sh` (the zip's `source_code_hash` change triggers a Lambda code
+update; HTML is served fresh so it shows immediately, and `/assets/*` hashes change so they
+never go stale; the signing key is preserved).
 
 ## Configuration (terraform variables)
 
 Non-secret vars have sensible defaults (`variables.tf`): `domain`
 (`try.libcatalog.evefreeman.com`), `demo_admin` (`demo@example.org:readonlydemo` -- read-only,
-safe to publish), `provider_name` (`hardcover`), `region` (`us-east-1`),
-`lambda_memory_mb` (512). Secrets go in the gitignored `terraform.tfvars`, written by
-`deploy.sh`:
+safe to publish), `provider_name` (`hardcover`), `region` (`us-east-1`). Lambda memory
+(cold-start lever) is the module's `memory_size` default (1024). Secrets go in the
+gitignored `terraform.tfvars`, written by `deploy.sh`:
 
 - `hosted_zone_id` -- Route 53 zone for evefreeman.com.
 - `local_signing_key` -- base64 Ed25519 seed; **stable** so demo sessions survive Lambda

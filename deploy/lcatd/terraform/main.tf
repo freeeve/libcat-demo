@@ -1,11 +1,11 @@
-# Read-only lcatd cataloging demo (tasks/009): a single arm64 Lambda serving the
-# libcatalog backend in LCATD_READ_ONLY mode, with the cataloging SPA embedded and the
-# BIBFRAME grains bundled in the zip (in-memory doc store -- no DynamoDB, no S3). Fronted
-# by an API Gateway v2 HTTP API on a custom subdomain. Writes are rejected by the backend
-# (blob store + HTTP 403 guard), so exposing it publicly is safe.
+# Read-only lcatd cataloging demo. Front door is CloudFront + a Lambda Function URL,
+# provisioned by the readonly-demo module in cloudfront.tf (tasks/010, migrated off API
+# Gateway). This file holds the shared LCATD_* env the module consumes, the us-east-1 ACM
+# certificate, and the Route 53 alias pointing at CloudFront. Writes are rejected by the
+# backend (read-only blob store + HTTP 403 guard), so public exposure is safe.
 
 locals {
-  # Assemble the LCATD_* environment. Grains extract to /var/task/grains on Lambda.
+  # Consumed by module.demo (cloudfront.tf). Grains extract to /var/task/grains on Lambda.
   lambda_env = merge(
     {
       LCATD_READ_ONLY         = "1"
@@ -19,85 +19,8 @@ locals {
   )
 }
 
-# --- Lambda execution role: CloudWatch Logs only (grains-in-zip, no AWS data services).
-data "aws_iam_policy_document" "assume" {
-  statement {
-    actions = ["sts:AssumeRole"]
-    principals {
-      type        = "Service"
-      identifiers = ["lambda.amazonaws.com"]
-    }
-  }
-}
-
-resource "aws_iam_role" "exec" {
-  name               = "${var.name}-exec"
-  assume_role_policy = data.aws_iam_policy_document.assume.json
-}
-
-resource "aws_iam_role_policy_attachment" "logs" {
-  role       = aws_iam_role.exec.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-}
-
-resource "aws_cloudwatch_log_group" "fn" {
-  name              = "/aws/lambda/${var.name}"
-  retention_in_days = var.log_retention_days
-}
-
-# --- The function.
-resource "aws_lambda_function" "api" {
-  function_name    = var.name
-  role             = aws_iam_role.exec.arn
-  filename         = var.lambda_zip
-  source_code_hash = filebase64sha256(var.lambda_zip)
-  runtime          = "provided.al2023"
-  handler          = "bootstrap"
-  architectures    = ["arm64"]
-  memory_size      = var.lambda_memory_mb
-  timeout          = 30
-
-  environment {
-    variables = local.lambda_env
-  }
-
-  depends_on = [aws_cloudwatch_log_group.fn]
-}
-
-# --- API Gateway v2 HTTP API -> Lambda ($default catch-all proxy).
-resource "aws_apigatewayv2_api" "api" {
-  name          = var.name
-  protocol_type = "HTTP"
-}
-
-resource "aws_apigatewayv2_integration" "lambda" {
-  api_id                 = aws_apigatewayv2_api.api.id
-  integration_type       = "AWS_PROXY"
-  integration_uri        = aws_lambda_function.api.invoke_arn
-  payload_format_version = "2.0"
-}
-
-resource "aws_apigatewayv2_route" "default" {
-  api_id    = aws_apigatewayv2_api.api.id
-  route_key = "$default"
-  target    = "integrations/${aws_apigatewayv2_integration.lambda.id}"
-}
-
-resource "aws_apigatewayv2_stage" "default" {
-  api_id      = aws_apigatewayv2_api.api.id
-  name        = "$default"
-  auto_deploy = true
-}
-
-resource "aws_lambda_permission" "apigw" {
-  statement_id  = "AllowAPIGatewayInvoke"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.api.function_name
-  principal     = "apigateway.amazonaws.com"
-  source_arn    = "${aws_apigatewayv2_api.api.execution_arn}/*/*"
-}
-
-# --- Custom domain: ACM cert (DNS-validated in the evefreeman.com zone) + API mapping.
+# --- Custom domain: ACM cert (us-east-1, DNS-validated) that CloudFront serves the alias
+# with. CloudFront requires the cert in us-east-1 -- this stack's region.
 resource "aws_acm_certificate" "cert" {
   domain_name       = var.domain
   validation_method = "DNS"
@@ -127,28 +50,15 @@ resource "aws_acm_certificate_validation" "cert" {
   validation_record_fqdns = [for r in aws_route53_record.cert_validation : r.fqdn]
 }
 
-resource "aws_apigatewayv2_domain_name" "domain" {
-  domain_name = var.domain
-  domain_name_configuration {
-    certificate_arn = aws_acm_certificate_validation.cert.certificate_arn
-    endpoint_type   = "REGIONAL"
-    security_policy = "TLS_1_2"
-  }
-}
-
-resource "aws_apigatewayv2_api_mapping" "map" {
-  api_id      = aws_apigatewayv2_api.api.id
-  domain_name = aws_apigatewayv2_domain_name.domain.id
-  stage       = aws_apigatewayv2_stage.default.id
-}
-
+# --- DNS: alias the custom domain at the CloudFront distribution (module.demo).
+# Z2FDTNDATAQYW2 is CloudFront's fixed hosted-zone id for alias records.
 resource "aws_route53_record" "alias" {
   zone_id = var.hosted_zone_id
   name    = var.domain
   type    = "A"
   alias {
-    name                   = aws_apigatewayv2_domain_name.domain.domain_name_configuration[0].target_domain_name
-    zone_id                = aws_apigatewayv2_domain_name.domain.domain_name_configuration[0].hosted_zone_id
+    name                   = module.demo.cloudfront_domain
+    zone_id                = "Z2FDTNDATAQYW2"
     evaluate_target_health = false
   }
 }
