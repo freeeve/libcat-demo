@@ -73,7 +73,9 @@
 }
 .evl-hero h1 { margin: 0 0 0.4rem; color: var(--lcat-on-accent); font-size: clamp(1.8rem, 4vw, 2.6rem); }
 .evl-hero p { margin: 0.3rem 0 0; max-width: 46rem; font-size: 1.05rem; }
-.evl-hero a { color: var(--lcat-on-accent); text-decoration: underline; }
+/* Buttons opt out: each .evl-btn variant owns its color pair (the --light chip is
+   surface-on-surface-colored, so inheriting on-accent here made it unreadable). */
+.evl-hero a:not(.evl-btn) { color: var(--lcat-on-accent); text-decoration: underline; }
 
 /* "Featured" shelf of covers below the hero. */
 .evl-shelf { max-width: var(--lcat-maxw); margin: 1.5rem auto 0; padding: 0 clamp(1rem, 4vw, 2rem); }
