@@ -49,18 +49,27 @@ so the custom chrome flips with the light/dark toggle too, automatically.
 
 ## 4. Use the injection hooks
 
-The module's base template exposes empty-by-default hooks an adopter can fill by
-creating a file of the same name: `_partials/head-extra.html` (extra `<head>` markup --
-stylesheets, meta tags), `_partials/footer.html` (site footer), and a `hero` block.
-For most sites that's all the customization surface you need.
+The module's base template exposes empty-by-default hooks an adopter fills by creating
+a file of the same name -- and they cover the whole chrome:
+
+- `_partials/head-extra.html` -- extra `<head>` markup (this site adds its stylesheet
+  and favicons here; SEO/OpenGraph/JSON-LD come from the module by default),
+- `_partials/banner.html` -- a site-wide ribbon above the header (here: the "this is
+  a demo" notice; a real library might post closure notices),
+- `_partials/brand.html` -- the header brand slot (here: a book colophon + wordmark),
+- `_partials/footer.html` -- the site footer,
+- a `hero` block for full-width sections (the homepage welcome panel).
+
+The primary nav needs no hook at all: define `[[menu.main]]` entries in `hugo.toml`
+and the module renders an accessible nav from them.
 
 ## 5. Shadow a template (only when you must)
 
 Any file in the module's `layouts/` can be replaced by putting a file at the same path
-in your site. This demo shadows exactly one: `baseof.html`, because it rebuilds the
-**header** (primary nav menu, brand mark, demo banner) and there's no hook for that.
-The cost: after a module upgrade you must re-diff your copy against the module's.
-Prefer tokens, added CSS, and hooks; shadow last.
+in your site. The cost: after a module upgrade you must re-diff your copy against the
+module's. This site used to shadow `baseof.html` for its header chrome; since the
+module grew the hooks above it shadows **nothing** -- every customization on this
+site is tokens, added CSS, hooks, or its own sections. That's the target to aim for.
 
 ## 6. Add whole pages and sections
 

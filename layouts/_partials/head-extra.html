@@ -1,0 +1,10 @@
+{{- /* Module head hook (libcatalog tasks/118-120): everything the module's default
+       head does not own. SEO/OG/JSON-LD now come from the module's head-seo.html;
+       this adds the site theme stylesheet (after lcat.css so it wins on cascade)
+       and the icons/manifest (tasks/005). */ -}}
+{{ with resources.Get "lcat-theme.css" }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
+<link rel="icon" href="{{ "/favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="icon" href="{{ "/favicon.ico" | relURL }}" sizes="any">
+<link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relURL }}">
+<link rel="manifest" href="{{ "/site.webmanifest" | relURL }}">
+<meta name="theme-color" content="#115c52">
