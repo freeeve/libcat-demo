@@ -19,3 +19,12 @@ tasks/127 with both fixes; these rules drop when the module ships them.
 Verified with CDP-driven headless Chrome (type into the Pagefind input, wait,
 screenshot -- scratchpad cdp-search.mjs pattern): light + dark both show a proper
 dropdown card, header intact, one correct highlighted result, readable chips.
+
+## Reverted (2026-07-06, v0.9.2)
+
+Owner policy set after this shipped: base-theme bugs get FILED (libcatalog
+tasks/127, updated with the deeper evidence -- filter/results columns overlap
+inside the drawer even with the overlay, single mount confirmed), and the base
+behavior stays as-is downstream. The v0.9.1 stopgap CSS (drawer overlay +
+--pagefind-ui-tag mapping) is removed; search renders exactly what the module
+ships until 127 lands upstream.
