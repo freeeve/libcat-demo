@@ -56,6 +56,31 @@
 .evl-shelf-item .evl-cover { width: 100%; height: auto; aspect-ratio: 2 / 3; }
 .evl-rating { color: var(--evl-gold); font-size: 0.85rem; letter-spacing: 0.1em; }
 .evl-rating span { color: var(--lcat-muted); letter-spacing: normal; }
+/* Pagefind results drawer as an overlay dropdown (tasks/022). The module renders
+   the whole Component UI in normal flow inside the header, so an open search
+   inflates the header row and reflows the page (filed upstream as libcatalog
+   tasks/127 -- this rule can go when the module positions the drawer itself). */
+.lcat-search-pagefind {
+  position: relative;
+  /* The module maps primary/text/background/border but not the tag-chip bg, which
+     stays Pagefind's light default and goes unreadable in dark mode. */
+  --pagefind-ui-tag: var(--lcat-surface-alt);
+}
+.lcat-search-pagefind .pagefind-ui__drawer:not(.pagefind-ui__hidden) {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  width: min(42rem, calc(100vw - 2rem));
+  max-height: min(70vh, 42rem);
+  overflow-y: auto;
+  background: var(--lcat-surface);
+  border: 1px solid var(--lcat-border);
+  border-radius: var(--evl-radius);
+  box-shadow: var(--evl-shadow);
+  padding: 0.75rem 1.25rem 1rem;
+  z-index: 60;
+}
+
 /* Reading-log line on Work pages (module work-extra hook, tasks/021). */
 .evl-reading-log { margin: 0.75rem 0 0; color: var(--lcat-muted); font-size: 0.95rem; }
 .evl-reading-log .evl-rating { font-size: inherit; }
