@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 11,
   "works": [
     {
       "id": "w0iqiaup570qf2",
@@ -112,11 +112,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/17456445/d34448a9-bf3f-441d-93f2-1cd32dd3867c.jpg",
-        "dateRead": "2025-03-18"
-      }
+      ]
     },
     {
       "id": "w0k0vof5a9t5p0",
@@ -220,12 +216,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/283236/138832113ec0c95d7155eacd7dc1ad12b96136b5.jpeg",
-        "dateRead": "2025-02-03",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w0nqmvm69v4k5q",
@@ -337,11 +328,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30845693/9ef45cef-6b2b-44a8-9d1c-1b625bb863fd.jpg",
-        "dateRead": "2024-09-19"
-      }
+      ]
     },
     {
       "id": "w0st9o2j2u7g8o",
@@ -447,12 +434,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31229730/6504478115374395.jpg",
-        "dateRead": "2025-02-11",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w0tm5ekugsuul8",
@@ -554,12 +536,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30401722/203725739738019-PxOL.jpg",
-        "dateRead": "2025-03-18",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "w11ae1bc770igg",
@@ -659,12 +636,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/30523234/492242428ce5245a402470ccf699f28b88f7c08f.jpeg",
-        "dateRead": "2024-11-18",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "w14s88evpcre3k",
@@ -765,12 +737,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30554086/5810455479831040.jpg",
-        "dateRead": "2024-12-27",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w1d90qohue2uqu",
@@ -862,12 +829,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/24940052/59ad59ca7c66a094a7fe06e7c955f2aa384816a3.jpeg",
-        "dateRead": "2024-05-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w1hdg4f5131ba6",
@@ -935,12 +897,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/61513243/6e3c1584a9a564fa958d733274dc78c1054958a2.jpeg",
-        "dateRead": "2024-08-16",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w28f4ploegtkho",
@@ -1036,12 +993,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30616103/9777107250064960-B0BLRD8YPD.01.MAIN._SCRM_.jpg",
-        "dateRead": "2025-04-08",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "w2m9dc7g0tej80",
@@ -1164,12 +1116,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/59556867/ec6f766e71f270e2aac18494d2a4d9c1e05ceb56.jpeg",
-        "dateRead": "2025-03-18",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w38t7er1qh6r1u",
@@ -1271,12 +1218,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/24542917/d68669a2fa471f20f2bec91f8c35c8b855470387.jpeg",
-        "dateRead": "2025-03-18",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w3leemlcpr97gu",
@@ -1333,12 +1275,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31725194/1413568976016770.jpg",
-        "dateRead": "2025-05-19",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "w4u21a159fm0i8",
@@ -1448,12 +1385,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/61033271/17d7f0ddd011d5ba040fb971860ab3890f91b956.jpeg",
-        "dateRead": "2024-08-11",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w50hpgopvot3da",
@@ -1550,12 +1482,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31229948/5853189347299330.jpg",
-        "dateRead": "2024-12-29",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w51cv7sa5hfr0o",
@@ -1641,12 +1568,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30615684/532124688376034.jpg",
-        "dateRead": "2026-01-31",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w6i6sh4r5gjlde",
@@ -1750,12 +1672,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31019620/7396225421748550.jpg",
-        "dateRead": "2025-02-13",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "w6uo0u2smvgcek",
@@ -1842,11 +1759,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30807633/f5215a82-e5ac-4898-b4e4-8511c9ad6a28.jpg",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "w78bjpk3nr6fvm",
@@ -1914,12 +1827,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30625722/7268502471465796-58960282.jpg",
-        "dateRead": "2026-01-01",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "w7f6c3ibad7gki",
@@ -2002,12 +1910,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31983493/4059f72e-65ad-499b-86ff-caf733698edb.jpg",
-        "dateRead": "2025-08-05",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "w7noclsgtee3b4",
@@ -2091,11 +1994,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/6140626/b741df4a9e5f50d8a5713b03122d0afe543cdb69.jpeg",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w7rovpe12dc796",
@@ -2184,12 +2083,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31491621/8797640100504895.jpg",
-        "dateRead": "2025-03-30",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w7rr3iqelkfpje",
@@ -2270,12 +2164,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31098981/201031394214271-B0CNNYXRFW.01.MAIN._SCRM_.jpg",
-        "dateRead": "2025-04-20",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "w837151q0muq9i",
@@ -2332,12 +2221,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31493257/8538021667482725.jpg",
-        "dateRead": "2025-05-09",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "w83h0te7a082jm",
@@ -2459,12 +2343,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/28317885/6d679483b8d3f62ce170e56ef2b82b3997eadea9.jpeg",
-        "dateRead": "2024-09-09",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w872qb23uo765s",
@@ -2586,12 +2465,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30405392/8358006616147171.jpg",
-        "dateRead": "2025-03-18",
-        "rating": "3.5"
-      }
+      ]
     },
     {
       "id": "w8f06lkbq09cl2",
@@ -2699,12 +2573,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/12846449/a82ee96fb437ad83b4ebb215643b7e8d644468f9.jpeg",
-        "dateRead": "2023-01-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w8qm7sc23bjpnk",
@@ -2810,12 +2679,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30616085/210865973633736.jpg",
-        "dateRead": "2025-01-05",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w8rthbf2n2fbre",
@@ -2943,12 +2807,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30396420/4372639752917043.jpg",
-        "dateRead": "2024-08-19",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w8vgrdmis2a6da",
@@ -3017,12 +2876,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31625645/4453221502090061.jpg",
-        "dateRead": "2025-05-11",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "w9gk2ffsrb2uf6",
@@ -3134,12 +2988,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/21716111/5323176149970177.jpg",
-        "dateRead": "2024-08-16",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w9suoijamc7tf6",
@@ -3223,12 +3072,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/32129454/20196d38-209f-4760-8e8b-1880b916031a.jpg",
-        "dateRead": "2026-03-07",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w9t8fic7bqfcti",
@@ -3268,12 +3112,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/31600725/a43588f011239701241614cfb8f35ce211ee39f5.jpeg",
-        "dateRead": "2025-02-27",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "w9tehhehmdvbtq",
@@ -3361,12 +3200,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/32794786/6985d5d6-29c1-44ba-b303-36fd50b12b6c.jpg",
-        "dateRead": "2025-03-18",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wa4r34oepq2gqm",
@@ -3462,12 +3296,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/22658252/a22e2e449f81d1f0e96d2d16e063f774113c8c92.jpeg",
-        "dateRead": "2026-05-11",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "waj2nlv21pudos",
@@ -3504,12 +3333,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/1671097/4d4b51f448afc36b0b8515a981918c4a714c0ec5.jpeg",
-        "dateRead": "2025-02-15",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wau98e67i6b6hi",
@@ -3612,12 +3436,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/116801/3d46aa36-501a-4609-a744-1500713078f9.jpg",
-        "dateRead": "2025-03-18",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wb62eovv2kh5gc",
@@ -3723,12 +3542,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/30400656/a042ea0a-127c-4e98-8202-f20519445ec3.jpg",
-        "dateRead": "2024-09-21",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wb7obkph37eqv4",
@@ -3850,12 +3664,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/31608045/3c51e2999ec8dc7e94fdd569d083d45f2d46dd3b.jpeg",
-        "dateRead": "2024-08-25",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wbhoepl75dqpb2",
@@ -3927,12 +3736,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31102976/2097440116862186-60525437.jpg",
-        "dateRead": "2026-01-01",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wbv1f581ofpoa6",
@@ -4026,12 +3830,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/48535872/e43cb53db7bc326ddbacb38c1b2c794b0756670e.jpeg",
-        "dateRead": "2024-04-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wcebkpb4us3qnc",
@@ -4111,12 +3910,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30919996/6038118354181532.jpg",
-        "dateRead": "2026-03-01",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wclag676s9ld2g",
@@ -4189,12 +3983,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30407805/3125941921004678-41033158.jpg",
-        "dateRead": "2025-11-11",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wcr5m01qphd6dm",
@@ -4296,12 +4085,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/187333/9694237244087422-circe.jpg",
-        "dateRead": "2024-09-05",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wd28gb8662doog",
@@ -4362,12 +4146,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/31547099/cfb0716382eace7aadb0e091c54e1b06627caae5.jpeg",
-        "dateRead": "2025-10-17",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wdj5a6lbj2is4g",
@@ -4500,12 +4279,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/30426459/f167b2da-7e34-4e59-a0da-2233d70a61b7.jpg",
-        "dateRead": "2024-08-23",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wdkjfsb5uenqc4",
@@ -4606,12 +4380,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/29849617/06ae5eb360de4cbfe986689a915820d18b594c5d.jpeg",
-        "dateRead": "2025-03-18",
-        "rating": "3.5"
-      }
+      ]
     },
     {
       "id": "wdrhjikq106s1g",
@@ -4706,12 +4475,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30941320/6212341049756211.jpg",
-        "dateRead": "2025-04-13",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wdv7ko8v4e2do8",
@@ -4813,12 +4577,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/30206313/f95c74793bcdd7925758f16a6f6f5f423a2ec81d.jpeg",
-        "dateRead": "2024-11-22",
-        "rating": "3.5"
-      }
+      ]
     },
     {
       "id": "wena74h9e8bsuc",
@@ -4930,12 +4689,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/30400653/ad16d6b9d667b7e2323184b60bdb1bcafbbe1650.jpeg",
-        "dateRead": "2025-03-18",
-        "rating": "3"
-      }
+      ]
     },
     {
       "id": "werrdhae5cs93k",
@@ -5057,12 +4811,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/book_mappings/7333156/d71bc6a97e9ec408e63f130067a87b7825ef8801.jpeg",
-        "dateRead": "2025-03-18",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wesgb3ep2uq7ji",
@@ -5174,11 +4923,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/book_mappings/7333079/1dd5f1cc67a36104185d7cc0c9967729fc44bf18.jpeg",
-        "dateRead": "2024-09-15"
-      }
+      ]
     },
     {
       "id": "wf4mfrj1iqdthm",
@@ -5258,12 +5003,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/59944438/4f1d22e70f4e325595c02a9b4654af09fc101c4c.jpeg",
-        "dateRead": "2025-10-28",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wfec2670b4kmka",
@@ -5390,12 +5130,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/31601422/3a01ea07-01f4-45a2-9940-6fc7e00e0d08.jpeg",
-        "dateRead": "2025-09-02",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wfelfel7u1ugkg",
@@ -5452,12 +5187,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31919582/2295061012017199.jpg",
-        "dateRead": "2025-05-23",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wfl0lg9qsoe1gm",
@@ -5577,11 +5307,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30462302/5659456890773424.jpg",
-        "dateRead": "2024-09-21"
-      }
+      ]
     },
     {
       "id": "wfpug34g5k3eg6",
@@ -5632,12 +5358,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/43281666/0c90160b7d7533a7a3f4f26a7f4b75aa4804f351.jpeg",
-        "dateRead": "2025-10-24",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wfvftug34o5fao",
@@ -5686,12 +5407,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/30615865/294a6b4e-9179-4818-a5e7-ef62ecd31b50.jpg",
-        "dateRead": "2025-09-02",
-        "rating": "3.5"
-      }
+      ]
     },
     {
       "id": "wg0vt75phonbj6",
@@ -5803,12 +5519,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/25799854/da8d98f95792ff3a53375db3c0d745ede376dbd0.jpeg",
-        "dateRead": "2024-01-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wgk60gl1jnv0sk",
@@ -5878,12 +5589,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31451412/7429527834824563.jpg",
-        "dateRead": "2026-02-13",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wgtc52vrqplv3m",
@@ -5996,12 +5702,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/30474703/a131f38041ff2c99c8667ca5fdf142f27da739ce.jpeg",
-        "dateRead": "2024-01-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wh8tnlk50ahgsa",
@@ -6085,12 +5786,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30615685/6628794588010536.jpg",
-        "dateRead": "2026-01-16",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wiar499bc1gba4",
@@ -6146,12 +5842,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31725222/3486665324002758.jpg",
-        "dateRead": "2025-05-19",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wic9v0vsnjk1ni",
@@ -6264,12 +5955,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/21490281/d9b48333ac7a69ebe0aa5573fe0ff032e6f97508.jpeg",
-        "dateRead": "2025-03-18",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wii038ein72ida",
@@ -6353,12 +6039,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31973926/2c664d3e-9aab-43e2-9d19-1d8ed8bfe6a6.jpg",
-        "dateRead": "2025-05-05",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wij7q3qjpoo2rg",
@@ -6454,12 +6135,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30502713/7420909540970702.jpg",
-        "dateRead": "2025-12-05",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wik7h7252lavo8",
@@ -6543,12 +6219,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/30711716/692111d40fe00e852ac26390b327807a5eb3d7d4.jpeg",
-        "dateRead": "2024-04-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wimlld0dsmpl24",
@@ -6656,12 +6327,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/32529586/7853371f-0635-45fd-86f5-6cb828947d9e.jpg",
-        "dateRead": "2025-09-10",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wivq08uf1id582",
@@ -6782,12 +6448,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/43328916/fa176120b21cfbaafcd9a26fe6f4252433a53f1f.jpeg",
-        "dateRead": "2024-09-06",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wjal4iqk2971iu",
@@ -6845,12 +6506,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/1499442/67d86bfa949b0e1073c54f3274ca3063a8fd9b6c.jpeg",
-        "dateRead": "2025-10-30",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wk0n9jbf75ksp2",
@@ -6961,12 +6617,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/50321830/c88e820437839aeed7b528ae46d4e045498c9c3d.jpeg",
-        "dateRead": "2024-01-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wk2j74a728huhi",
@@ -7046,12 +6697,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30407810/1361519743556770.jpg",
-        "dateRead": "2025-11-29",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wkmvallsrn5a26",
@@ -7127,12 +6773,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/61497763/80e9a865e0ae7315b4810cfc3fe5984d77f95017.jpeg",
-        "dateRead": "2025-10-20",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wkupo9irlqsble",
@@ -7189,12 +6830,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31625642/3509542803554595.jpg",
-        "dateRead": "2025-05-15",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wlecs9kl65t68s",
@@ -7301,12 +6937,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/25808586/c5eec507ba859d2742dbd8df0ad33dd46ae943d2.jpeg",
-        "dateRead": "2024-08-30",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wli4qu30u0b746",
@@ -7365,12 +6996,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/24309150/content.jpeg",
-        "dateRead": "2025-11-13",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wn3fpftme9e8cm",
@@ -7472,12 +7098,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/30535150/2efdfd508a803c89913fd6e987f69048a17c89c6.jpeg",
-        "dateRead": "2023-01-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wn54qtdcai0m9m",
@@ -7589,12 +7210,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/17079379/6cd33f6e07aae9f2a3f5299de4fe48c07571dd66.jpeg",
-        "dateRead": "2025-03-18",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wo9nj16u72ofv4",
@@ -7704,12 +7320,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/59649243/8238538dd15b48457a11bcc5d14862478273e5f6.jpeg",
-        "dateRead": "2025-03-14",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "woh4jig67snvn6",
@@ -7818,12 +7429,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/59737667/d8b94ddbd3395c0784f29f179d5010ae341e3417.jpeg",
-        "dateRead": "2024-05-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wol30aucc2mjkm",
@@ -7937,12 +7543,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/31117442/66adf206dfa994560008db5c47dcc978f4becbaf.jpeg",
-        "dateRead": "2025-01-30",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wp2fohlfl09oj8",
@@ -8029,12 +7630,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31229951/405741932745183.jpg",
-        "dateRead": "2024-12-31",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wp36iau4erpbqm",
@@ -8106,12 +7702,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/59426714/3e472132180347eac0eed5cc8245c552b4bb9d76.jpeg",
-        "dateRead": "2025-11-13",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wp7t7s98bpk26q",
@@ -8224,12 +7815,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/31117444/2985c3e6aa91375ed498e091d77716a7cdd8e537.jpeg",
-        "dateRead": "2025-01-14",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wpdq46qa7jdjqg",
@@ -8323,11 +7909,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/27175138/88fbdf6b-bbfd-4b2a-8ca2-4a8c6d4474e4.jpg",
-        "dateRead": "2024-09-22"
-      }
+      ]
     },
     {
       "id": "wpm0gru7ln5nqo",
@@ -8445,12 +8027,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30599331/7462847827989860.jpg",
-        "dateRead": "2024-08-29",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wpmer7fnaiu1re",
@@ -8487,12 +8064,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/31480454/2aca35164e717e5d4a648a8529fc227673cf807e.jpeg",
-        "dateRead": "2025-02-24",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wq3qaema2ogkqs",
@@ -8560,12 +8132,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31749662/2097547214310973.jpg",
-        "dateRead": "2025-04-05",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wq5sr742hfa7m2",
@@ -8678,12 +8245,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/5731863/6a6401dd-7e58-43ee-bf45-0b7d76c1551c.jpg",
-        "dateRead": "2025-09-10",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wq6g8v3ks1qet2",
@@ -8789,12 +8351,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30616101/1778731293294393.jpg",
-        "dateRead": "2025-01-06",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wq7p7dil0deeda",
@@ -8851,12 +8408,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/30407770/6978721110315722-57913863.jpg",
-        "dateRead": "2026-01-01",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wqc5cfulv2uq9e",
@@ -8928,12 +8480,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/39980817/7ff31810f0058dd29ce0feb1870e58d4a88c097b.jpeg",
-        "dateRead": "2025-11-22",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wratrjueoqlihs",
@@ -9045,12 +8592,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/book_mappings/7332803/487291b01ddc8783710e7f90bd42666090e43d9f.jpeg",
-        "dateRead": "2024-09-11",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wrgtnnsm9a83to",
@@ -9100,12 +8642,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/users/8674/7185582776706685.jpg",
-        "dateRead": "2025-04-24",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wrpvpl22cdg4p8",
@@ -9217,12 +8754,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/book_mappings/7332654/d29ec327867b45eaa6838d359475917d6e9cabbc.jpeg",
-        "dateRead": "2024-09-08",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "ws9l6cmdqo1t1q",
@@ -9284,11 +8816,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/27608286/16c054053a7f72c73d58ebc8b0348069682cdb78.jpeg",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wsl66tqth970p0",
@@ -9361,12 +8889,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/31418098/858693067237819.jpg",
-        "dateRead": "2025-03-20",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wtdjlpf4s6n70e",
@@ -9398,11 +8921,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "dateRead": "2025-03-14",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wtnfo0d9gr1qom",
@@ -9445,11 +8964,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/60592301/393b52d3d7c710b0951f543503460737d226ffe4.jpeg",
-        "rating": "4.5"
-      }
+      ]
     },
     {
       "id": "wufg2nd4qorh8i",
@@ -9572,12 +9087,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/editions/3274049/8741341047797682-91mYu67RfUL._SL1500_.jpg",
-        "dateRead": "2024-07-01",
-        "rating": "5"
-      }
+      ]
     },
     {
       "id": "wur13e29mtd2h4",
@@ -9678,12 +9188,7 @@
             }
           ]
         }
-      ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/external_data/59944437/aed925dcd5b713dc2da257cf8c3ad18a33e63d2d.jpeg",
-        "dateRead": "2025-10-30",
-        "rating": "4"
-      }
+      ]
     },
     {
       "id": "wvkn0bub20n82g",
@@ -9795,12 +9300,143 @@
             }
           ]
         }
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "id": "https://homosaurus.org/v3/homoit0000827",
+      "labels": {
+        "en": "LGBTQ books",
+        "es": "Libros LGBTQ"
+      },
+      "scheme": "homosaurus"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh2026001126",
+      "labels": {
+        "en": "Fiction",
+        "es": "Ficción"
+      },
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh2026001184",
+      "labels": {
+        "en": "Poetry",
+        "es": "Poesía"
+      },
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85001072",
+      "labels": {
+        "en": "Adventure stories",
+        "es": "Novela de aventuras"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
       ],
-      "extra": {
-        "cover": "https://assets.hardcover.app/edition/12841472/a63e7ea1-9064-4eb8-afb4-5372db40aed2.jpg",
-        "dateRead": "2025-03-18",
-        "rating": "5"
-      }
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85037260",
+      "labels": {
+        "en": "Detective and mystery stories",
+        "es": "Novela policíaca"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ],
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85040350",
+      "labels": {
+        "en": "Dystopias",
+        "es": "Distopías"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh85118629"
+      ],
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85047114",
+      "labels": {
+        "en": "Fantasy fiction",
+        "es": "Literatura fantástica"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ],
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85061165",
+      "labels": {
+        "en": "Historical fiction",
+        "es": "Novela histórica"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ],
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85062084",
+      "labels": {
+        "en": "Horror tales",
+        "es": "Cuentos de terror"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ],
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85078595",
+      "labels": {
+        "en": "Romance fiction",
+        "es": "Novela romántica"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ],
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85118629",
+      "labels": {
+        "en": "Science fiction",
+        "es": "Ciencia ficción"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ],
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh85149267",
+      "labels": {
+        "en": "Young adult fiction",
+        "es": "Ficción para adultos jóvenes"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ],
+      "scheme": "lcsh"
+    },
+    {
+      "id": "https://id.loc.gov/authorities/subjects/sh98004883",
+      "labels": {
+        "en": "Suspense fiction",
+        "es": "Novela de suspenso"
+      },
+      "broader": [
+        "https://id.loc.gov/authorities/subjects/sh2026001126"
+      ],
+      "scheme": "lcsh"
     }
   ]
 }

@@ -1,7 +1,7 @@
 # Data pipeline
 
 How the projected data under `assets/` (`catalog.json` + `facets.json`, schema
-version 9) is produced. All commands run from the repo root.
+version 11) is produced. All commands run from the repo root.
 
 ```
 Hardcover "read" shelf
