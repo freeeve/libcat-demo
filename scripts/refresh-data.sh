@@ -3,7 +3,8 @@
 # "Read" shelf via the real libcat pipeline (tasks/008):
 #
 #   Hardcover Read shelf --(lcat hardcover)--> BIBFRAME grains + catalog.nq  (build/)
-#                        --(lcat project)-----> catalog.json + facets.json   (schema v11)
+#                        --(lcat project)-----> catalog.json + facets.json   (schema v12)
+#                                               + similar.json (per-work neighbour rail, schema v1)
 #
 # This replaces the old hand-rolled Node pipeline (scripts/*.mjs). Controlled subjects,
 # facet counts, the cover/rating/dateRead extras, and the schema version are all owned by
@@ -21,7 +22,7 @@
 #
 #   (cd ../libcat && go run ./cmd/lcat project \
 #      --catalog "$OLDPWD/build/catalog.nq" --provider hardcover --out "$OLDPWD/build/projected")
-#   cp build/projected/{catalog,facets}.json assets/
+#   cp build/projected/{catalog,facets,similar}.json assets/
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -40,8 +41,9 @@ mkdir -p "$BUILD"
 echo "==> lcat hardcover: ingesting Read shelf -> $BUILD"
 lcat hardcover --out "$BUILD" "$@"
 
-echo "==> lcat project: -> assets/ (schema v11)"
+echo "==> lcat project: -> assets/ (schema v12)"
 lcat project --catalog "$BUILD/catalog.nq" --provider hardcover --out "$BUILD/projected"
-cp "$BUILD/projected/catalog.json" "$BUILD/projected/facets.json" "$ROOT/assets/"
+cp "$BUILD/projected/catalog.json" "$BUILD/projected/facets.json" \
+   "$BUILD/projected/similar.json" "$ROOT/assets/"
 
-echo "done: assets/catalog.json + assets/facets.json regenerated (schema v11)."
+echo "done: assets/catalog.json + facets.json + similar.json regenerated (schema v12)."

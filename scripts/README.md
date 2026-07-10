@@ -1,7 +1,7 @@
 # Data pipeline
 
-How the projected data under `assets/` (`catalog.json` + `facets.json`, schema
-version 11) is produced. All commands run from the repo root.
+How the projected data under `assets/` (`catalog.json` + `facets.json` +
+`similar.json`, schema version 12) is produced. All commands run from the repo root.
 
 ```
 Hardcover "read" shelf
@@ -13,6 +13,7 @@ build/catalog.nq         one Work per book, one Instance per format; cover/ratin
         ▼
 assets/catalog.json      works with controlled subjects[], instances[], extra{...}
 assets/facets.json       count-desc-then-alpha facet counts for every dimension
+assets/similar.json      per-work neighbour rail (shared subjects/tags/contributors)
 ```
 
 Both steps are the real **libcat** pipeline (`../libcat/cmd/lcat`), not a
@@ -46,9 +47,11 @@ into `build/` (gitignored intermediate grains), then `lcat project` into `assets
   reserved `extra` object, which the module content adapter forwards verbatim into page
   params -- so `covers = true` renders them.
 - **`lcat project --catalog build/catalog.nq --provider hardcover --out build/projected`**
-  -- projects the graph to `catalog.json` + `facets.json` (+ an unused `redirects.json`)
-  at the module's current schema version. `refresh-data.sh` copies the two files the
-  module reads into `assets/`. Never hand-edit facet counts or the schema version --
+  -- projects the graph to `catalog.json` + `facets.json` + `similar.json` (+ an unused
+  `redirects.json`) at the module's current schema version. `similar.json` (its own
+  schema v1) holds each work's neighbour rail -- shared subjects/tags/contributors;
+  the module renders no rail if it is absent. `refresh-data.sh` copies the three files
+  the module reads into `assets/`. Never hand-edit facet counts or the schema version --
   re-run the projector.
 
 ### Offline replay
